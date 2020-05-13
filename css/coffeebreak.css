@@ -86,10 +86,13 @@ h2 {
     color: #ffffff;
     letter-spacing: 1pt;
     font-size: 4.0vw;
-    text-shadow: 10px 10px 20px black;
+    text-shadow: 5px 5px 5px #1d1e1f;
     transition: all 0.50s linear;
-    font-weight: 900;
-    font-family: 'PT Serif', serif;
+    font-family: Courier New, monospace;
+    background-color: #1d1e1f8e;
+
+
+
 }
 
 /*espaçamento do subcabeçalho*/
@@ -132,11 +135,12 @@ h2 {
     font-size: 18pt;
     color: whitesmoke;
     padding: 50px;
-    
-    
+
+
 
 }
-.conteudo-rodape img{
+
+.conteudo-rodape img {
     width: 50px;
     height: 50px;
     padding: 10px;
