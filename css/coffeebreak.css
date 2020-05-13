@@ -1,6 +1,6 @@
 html,
 body {
-    font-size: 18pt;
+    font-size: 14pt;
     font-family: "apercu", -apple-system, system, sans-serif;
     text-decoration: none;
     font-weight: 500;
@@ -63,7 +63,7 @@ ul {
 .subcabecalho {
     width: 100%;
     height: auto;
-    background-image: url(/background/3776683.jpg);
+    background-image: url("../background/3776683.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -111,9 +111,8 @@ h2 {
 }
 
 .foto {
-    width: 500px;
+    width: 400px;
     height: auto;
-    text-align: center;
     transition: 1s;
     margin: 20px;
 
@@ -132,18 +131,21 @@ h2 {
 
 .conteudo-rodape {
     text-align: center;
-    font-size: 18pt;
     color: whitesmoke;
     padding: 50px;
-
-
-
 }
 
 .conteudo-rodape img {
     width: 50px;
     height: 50px;
     padding: 10px;
+}
+
+.conteudo-rodape img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 0 10px #6C63FF, 0 0 10px #6C63FF, 0 0 10px darkblue;
+    transition: 1s;
 }
 
 .rodape::before {
