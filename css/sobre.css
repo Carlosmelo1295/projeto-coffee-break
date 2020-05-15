@@ -66,11 +66,12 @@ body {
     border-radius: 20px;
 
 
+
 }
 
 
 .descricao {
-    text-align: justify;
+    text-align: left;
     font-size: 18px;
     line-height: 2em;
     padding: 0 20px;
@@ -86,5 +87,18 @@ h3 {
     text-align: center;
     background-color: ;
     font-size: 14px;
+
+}
+
+@media (max-width: 600px) {
+    .descricao {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .container-descricao {
+        width: 90%;
+    }
+
 
 }
