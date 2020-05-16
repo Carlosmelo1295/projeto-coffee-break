@@ -1,9 +1,9 @@
 html,
 body {
     font-size: 14pt;
-    font-family: "apercu", -apple-system, system, sans-serif;
-    font-weight: 500;
-    margin: 0 auto;
+    font-family: Montserrat, Arial, sans-serif;;
+    font-weight: 400;
+    margin: 0 ;
     padding: 0;
     width: 100%;
     height: 100%;
@@ -16,47 +16,60 @@ a {
 
 }
 
-
 /*barra que contem o logo e o menu */
 .cabecalho {
     background-color: rgba(0, 0, 0, 0.404);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.644), 0 0 20px rgba(0, 0, 0, 0.89), 0 0 20px rgba(17, 17, 19, 0.719);
-    display: inline-block;
+    display:flex;
     width: 100%;
+    z-index: 14;
+    box-shadow: 0 4px 9px 0 rgba(0,0,0,.5);
+    position: relative;
+   
+    
 }
 
-/*logo do cabeçalho*/
-.logo {
-    padding: 15px 0 0 50px;
-
+.cabecalho img{
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 180px;
+    height: auto;
+    
 }
 
-.menu li,
-ul {
+.menu {
+    display:block;
+    width: 100%; 
+}
 
-    list-style-type: none;
-    float: right;
-    display: block;
-    margin-top: -21px;
-    padding-right: 15px;
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+   
+}
 
-
+.menu li{
+    list-style: none;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #6C63FF;
-    margin-left: 50px;
-
+        transition: background-color, 0.2s, color 0.2s;
+        color: rgb(255, 255, 255);
+        padding: 2px 25px;
+    
 }
 
 /*Efeito botão de menu*/
 .menu a:hover {
-    background-color: rgba(107, 99, 255, 0.199);
+    background-color:#6C63FF;
     border-radius: 20px;
-    box-shadow: 0 0 20px #6C63FF, 0 0 20px #6C63FF, 0 0 30px #6C63FF;
-    transition: 1s;
-    padding: 10px;
+    transition: 500ms;
+    transform: scale(1.2);
+    
+    
+    
 
 
 }
@@ -71,13 +84,11 @@ ul {
     background-position: center;
 }
 
-.subcabecalho::before {
+.subcabecalho::after{
     content: '';
     display: block;
-    width: 100%;
-    height: 2px;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-
+    box-shadow: 0 4px 9px 0 rgba(0,0,0,.5);
+    z-index: 14;
 }
 
 /* tag para selecionar o h2 dentro do subcabeçalho*/
@@ -89,10 +100,9 @@ h2 {
     transition: all 0.50s linear;
     font-family: Courier New, monospace;
     background-color: #1d1e1f8e;
-
-
-
 }
+
+
 
 /*espaçamento do subcabeçalho*/
 .espacamento {
@@ -115,7 +125,7 @@ h2 {
 .foto {
     width: 60vh;
     height: auto;
-    transition: 1s;
+    transition: 500ms;
     margin: 30px;
     border: solid 1px #6C63FF;
 
@@ -151,7 +161,7 @@ h2 {
     transform: scale(1.1);
     z-index: 2;
     box-shadow: 0 0 10px #6C63FF, 0 0 10px #6C63FF, 0 0 10px darkblue;
-    transition: 1s;
+    transition: 500ms;
 }
 
 .rodape::before {
@@ -184,9 +194,9 @@ h2 {
         font-size: 12px;
     }
 
-    .cabecalho {
-        background-color: rgba(0, 0, 0, 0.404);
-
+    h2 {
+        background-color: #1d1e1fd3;
+        border-radius: 2px;
     }
 
     .menu {
@@ -194,7 +204,6 @@ h2 {
     }
 
     .cabecalho {
-        display: flex;
         width: 100%;
         height: 40px;
         justify-content: center;
@@ -206,7 +215,7 @@ h2 {
     }
 
     .foto {
-        width: 45vh;
+        width: 40vh;
         padding: 0;
         margin-block-start: 10px;
         border: solid 1px chocolate;
