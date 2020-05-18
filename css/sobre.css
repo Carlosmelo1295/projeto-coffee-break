@@ -9,23 +9,23 @@ body {
     font-family: Montserrat, Arial, sans-serif;
     color: whitesmoke;
     font-weight: 400;
-    background-image: url(https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #171a21;
+    scroll-behavior: smooth;
 }
+
 
 .voltar {
     display: flex;
     justify-content: center;
     padding: 5px;
+    box-shadow: 0 0 35px rgb(197, 124, 71);
 
 }
 
 .voltar a {
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: bolder;
     color: whitesmoke;
 
 }
@@ -33,7 +33,9 @@ body {
 .voltar a:hover {
     transition: 500ms;
     transform: scale(1.2);
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 20px cornflowerblue;
+    
+
 
 }
 
@@ -41,48 +43,72 @@ body {
     margin: 2em;
     display: flex;
     justify-content: center;
-
+    
 }
 
 .foto img {
+    width: 300px;
+    height: 300px;
     border-radius: 200px;
     padding: 10px;
     margin: 20px;
-
+    box-shadow: 0 0 35px cornflowerblue;
 }
 
 .foto img:hover {
     transition: 500ms;
-    transform: scale(1.2);
+    transform: rotate(360deg);
 }
 
 .container-descricao {
-    background-color: rgba(0, 0, 0, 0.767);
     margin: auto;
-    width: 60%;
-    border: 3px solid rgba(0, 0, 0, 0.603);
+    width: 100vh;
+    border: 3px solid cornflowerblue;
     padding: 10px;
     border-radius: 20px;
+    box-shadow: 0 0 35px cornflowerblue;
 
 }
 
 .descricao {
-    text-align: left;
-    font-size: 18px;
+    text-align: center;
+    font-size: 13pt;
     line-height: 2em;
-    padding: 0 20px;
+    padding: 5px;
+
+
 }
 
-h3 {
+.intro {
     text-align: center;
+    font-size: 20pt;
+     
 }
 
 .rodape {
-    text-align: center;
     font-size: 17px;
     color: rgb(255, 255, 255);
     padding: 20px;
-    line-height: 1.3em;
+    line-height: 1.5em;
+     box-shadow: 0 0 35px rgb(197, 124, 71);
+     display: flex;
+     justify-content: center;
+     margin-top: 50px;
+}
+
+/*Logo coração*/
+.fa-heart {
+    color: red;
+}
+/*logo café*/
+.fa-coffee {
+    color: royalblue;
+}
+
+/*logo home*/
+.fa-home{
+    color:royalblue ;
+    font-size: 1.5em;
 }
 
 @media (max-width: 600px) {
@@ -95,5 +121,10 @@ h3 {
         width: 90%;
     }
 
+    .foto img {
+        width: 220px;
+        height: 220px;
 
+
+    }
 }
