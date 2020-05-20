@@ -10,6 +10,7 @@ body {
     background-color: #171a21;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 a {
@@ -19,12 +20,14 @@ a {
 
 /*barra que contem o logo e o menu */
 .cabecalho {
-    background-color: rgba(0, 0, 0, 0.404);
+    background: #171a21;
     display: flex;
-    width: 100%;
-    z-index: 14;
-    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, .5);
-    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.664);
+    position: fixed;
 
 
 }
@@ -72,20 +75,15 @@ a {
 
 /*subcabeçalho*/
 .subcabecalho {
-    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 5vh;
     height: auto;
     background-image: url("../background/3776683.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-.subcabecalho::after {
-    content: '';
-    display: block;
-    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, .5);
-    z-index: 14;
-
 }
 
 /* tag para selecionar o h2 dentro do subcabeçalho*/
@@ -100,16 +98,19 @@ h2 {
 
 }
 
-.barra{
+.barra {
     animation: piscarBarra 500ms linear infinite;
 }
-@keyframes piscarBarra{
+
+@keyframes piscarBarra {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.1;
     }
+
     100% {
         opacity: 0;
     }
@@ -127,10 +128,12 @@ h2 {
 
 .galeria {
     padding: 30px;
-    background-color: #171a21;
+    background-image: radial-gradient(ellipse farthest-side, rgba(0, 111, 255, 0.15), transparent);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
 }
@@ -139,7 +142,7 @@ h2 {
     width: 60vh;
     height: auto;
     transition: 500ms;
-    margin: 30px;
+    margin: 20px;
     border: solid 1px #6C63FF;
 
 
@@ -260,7 +263,6 @@ h2 {
     }
 
     .cabecalho {
-        width: 100%;
         height: 40px;
         justify-content: center;
         align-items: center;
@@ -268,6 +270,19 @@ h2 {
 
     .cabecalho img {
         width: 150px;
+    }
+
+    .subcabecalho {
+
+        margin-top: 3vh;
+    }
+
+    .galeria {
+
+        background-image: radial-gradient(ellipse farthest-side, rgba(238, 140, 11, 0.274), transparent);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
     .foto {
@@ -294,6 +309,7 @@ h2 {
 
     }
 
+
     .rodape-media a {
         padding: 10px;
         color: chocolate;
@@ -311,5 +327,42 @@ h2 {
     .topo-media {
         display: none;
     }
+
+}
+
+@media (max-width: 800px) {
+    .galeria {
+        padding: 10px;
+    }
+
+    .foto {
+        width: 40vh;
+
+        margin: 10px;
+
+    }
+
+    .subcabecalho {
+
+        margin-top: 2vh;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+    .subcabecalho {
+        margin-top: 4vh;
+    }
+
+    .cabecalho {
+        height: 30px;
+
+    }
+
+    .cabecalho img {
+        width: 100px;
+    }
+
 
 }
