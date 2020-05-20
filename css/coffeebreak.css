@@ -336,8 +336,7 @@ h2 {
     }
 
     .foto {
-        width: 40vh;
-
+        width: 35vh;
         margin: 10px;
 
     }
@@ -352,16 +351,21 @@ h2 {
 
 @media (max-width: 320px) {
     .subcabecalho {
-        margin-top: 4vh;
+        margin-top: auto;
     }
 
     .cabecalho {
-        height: 30px;
+        margin-top: -10px;
+        position: relative;
 
     }
 
     .cabecalho img {
         width: 100px;
+
+    }
+    .foto{
+        width: 50vh;
     }
 
 
