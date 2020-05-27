@@ -4,26 +4,42 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    font-family: Montserrat, Arial, sans-serif;
-    color: whitesmoke;
-    font-weight: 400;
-    background-color: #171a21;
-    scroll-behavior: smooth;
-    
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.795);
 }
 
-a{
-    text-decoration: none;
-    color:rgb(197, 124, 71);
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(0, 0, 0, 0.795);
 }
+
+::-webkit-scrollbar-thumb {
+    background: #6c63ff;
+}
+
+html,
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: whitesmoke;
+    font-style: none;
+    background-color: #171a21;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(197, 124, 71);
+}
+
 .voltar {
     display: flex;
     justify-content: center;
     padding: 5px;
-    box-shadow: 0 0 35px rgb(197, 124, 71);
-   
+    background-color: #00000062;
+
 
 }
 
@@ -39,25 +55,24 @@ a{
     transition: 500ms;
     transform: scale(1.2);
     text-shadow: 0 0 20px cornflowerblue;
-    
+
 
 
 }
 
 .container-foto {
-    margin: 2em;
     display: flex;
-    justify-content: center;
+    float: left;
     
+
 }
 
 .foto img {
     width: 300px;
     height: 300px;
     border-radius: 200px;
-    padding: 10px;
-    margin: 20px;
-    box-shadow: 0 0 35px cornflowerblue;
+    margin: 10px;
+
 }
 
 .foto img:hover {
@@ -67,21 +82,22 @@ a{
 
 .container-descricao {
     margin: auto;
-    width: 80%;
+    width: 100%;
     height: auto;
     border: 3px solid cornflowerblue;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 0 0 35px cornflowerblue;
+    box-shadow: 0 0 30px cornflowerblue;
+    margin-top: 4em;
 
 }
 
-.descricao p{
+.descricao p {
     text-align: justify;
     font-size: 13pt;
     line-height: 2em;
     padding: 20px;
-    
+
 
 }
 
@@ -89,51 +105,50 @@ a{
     text-align: center;
     font-size: 18pt;
     line-height: 2em;
-     
+
 }
 
 .rodape {
-    font-size: 17px;
+    font-size: 12pt;
     color: rgb(255, 255, 255);
+    background-color: #00000062;
     padding: 20px;
-    line-height: 1.5em;
-     box-shadow: 0 0 35px rgb(197, 124, 71);
-     display: flex;
-     justify-content: center;
-     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 /*Logo coração*/
 .fa-heart {
     color: red;
 }
+
 /*logo café*/
 .fa-coffee {
     color: royalblue;
 }
 
 /*logo home*/
-.fa-home{
-    color:royalblue ;
+.fa-home {
+    color: royalblue;
     font-size: 1.5em;
 }
 
 
 @media (max-width: 600px) {
     .descricao {
-        font-size: 13px;
+        font-size: 12pt;
         text-align: justify;
-    }
-
-    .container-descricao {
-        margin: auto;
-        width: 90%
     }
 
     .foto img {
         width: 220px;
         height: 220px;
+        
+    }
 
-
+    .intro{
+        font-size: 15pt;
+       
     }
 }

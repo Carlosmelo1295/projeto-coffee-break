@@ -1,8 +1,25 @@
+/*Reset*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*Estilizar barra de rolagem*/
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.795);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(0, 0, 0, 0.795);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6c63ff;
+}
+
+/*-----------------------------------------------------*/
 
 html,
 body {
@@ -13,7 +30,8 @@ body {
     height: 100%;
     background-color: #171a21;
     scroll-behavior: smooth;
- 
+    
+
 
 }
 
@@ -30,7 +48,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 20;
+    z-index: 2;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
     position: relative;
 
@@ -54,26 +72,37 @@ a {
     justify-content: flex-end;
     margin-right: 20px;
     margin-top: 15px;
-    align-items: center;
 
 }
 
 .menu li {
     list-style: none;
+    opacity: 0.5;
+}
+
+.menu li:hover {
+    opacity: 1;
+}
+
+/*Efeito botão de menu*/
+.menu li:hover::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #6C63FF;
+    transition: 500ms;
+    margin-top: 10px;
+    box-shadow: 0 0 10px #6C63FF;
+
+
+
+
 }
 
 .menu a {
     transition: background-color, 0.2s, color 0.2s;
     color: whitesmoke;
     padding: 2px 25px;
-
-}
-
-/*Efeito botão de menu*/
-.menu a:hover {
-    background-color: #6C63FF;
-    border-radius: 20px;
-    transition: 500ms;
 
 }
 
@@ -99,8 +128,7 @@ a {
     letter-spacing: 1pt;
     font-size: 3.9vw;
     text-shadow: 5px 5px 5px #1d1e1f;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 200;
+    font-weight: 900;
     justify-content: center;
     margin-top: 5.5em;
     margin-left: 1em;
@@ -125,95 +153,117 @@ a {
     }
 }
 
-/*conteúdo principal da página*/
 
-.galeria {
-    padding: 30px;
+.container-galeria {
+    margin: 1.5em;
     background-image: radial-gradient(ellipse farthest-side, rgba(0, 110, 255, 0.397), transparent);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    overflow: hidden;
     flex-wrap: wrap;
-   
 
 }
 
 .foto {
-    width: 60vh;
+    max-width: 20em;
     height: auto;
     transition: 500ms;
-    margin: 20px;
-    
+    margin-top: 0.8em;
+    border-radius: 5px;
 
 }
+
 
 .foto:hover {
     box-shadow: 0 0 10px #6C63FF, 0 0 10px #6C63FF, 0 0 10px darkblue;
+    transition: 500ms;
+    
 
 }
+/*legenda imagens */
+.imagem figcaption{
+    opacity: 0;
+    color: whitesmoke;
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    transition: opacity 500ms;
+    z-index: 2;
+    margin-top: -35px;
+    margin-left: 1em;
+    font-size: 12pt;
+    font-weight: normal;
+}
+.imagem:hover figcaption{
+    opacity: 1;
+    
+}
 
+/*-------------------------------------*/
 
-.rodape {
-    display: block;
-    font-size: 13pt;
+footer {
+    width: 100%;
+    margin: auto;
+    font-size: 12pt;
     background-color: #0e1014;
-    margin: 0 auto;
-    padding: 10px;
-
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 
 }
+
+footer::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #574473;
+    position: absolute;
+}
+
 
 .conteudo-rodape {
     text-align: center;
     color: #fff;
-    padding: 20px;
     line-height: 2em;
-
-
+    width: 100%;
+    padding: 10px;
 
 }
 
+
+#report a {
+    color: cornflowerblue;
+    opacity: 0.6;
+
+}
+
+#report a:hover {
+    opacity: 1;
+}
+
+
+/*fotos media*/
 .conteudo-rodape img {
     width: 60px;
     height: 60px;
     padding: 10px;
+    opacity: 0.5;
 }
 
 .conteudo-rodape img:hover {
-    transform: scale(1.1);
-    z-index: 2;
-    box-shadow: 0 0 10px #6C63FF, 0 0 10px #6C63FF, 0 0 10px darkblue;
-    transition: 500ms;
+    opacity: 1;
 
 }
 
-/*ícone para voltar ao topo*/
-.topo-media {
-    margin: -20px;
-    margin-left: 10px;
-    font-size: 2em;
-    text-align: left;
-    display: block;
-}
-
-/*ícone para voltar ao topo*/
-.fa-angle-double-up {
-    color: cornflowerblue;
-}
-
-.fa-angle-double-up:hover {
-    text-shadow: 0 0 10px rgb(255, 255, 255);
-    transition: 500ms;
-    transform: scale(1.1);
-
-}
 
 /*ícone de coração*/
 .fa-heart {
     color: rgb(172, 19, 19);
 }
+
 
 /*ícone café*/
 .fa-coffee {
@@ -247,7 +297,7 @@ a {
 @media (max-width: 1024px) {
 
     .foto {
-        width: 50vh;
+
         margin-top: 40px;
     }
 
@@ -261,7 +311,7 @@ a {
         padding: 2px;
     }
 
-    .conteudo-rodape img{
+    .conteudo-rodape img {
         width: 70px;
         height: 70px;
     }
@@ -275,11 +325,6 @@ a {
         height: 390px;
     }
 
-    .foto {
-        width: 25vh;
-
-    }
-
     .subtitle h1 {
         font-size: 1.8em;
         margin-top: 8em;
@@ -289,7 +334,6 @@ a {
     .conteudo-rodape {
         margin-top: 2.8em;
         position: relative;
-        font-size: 1.4em;
 
     }
 
@@ -298,10 +342,9 @@ a {
         height: 80px;
     }
 
-    .topo-media {
-        margin-top: -1em;
-    }
-    
+    .imagem figcaption{
+        opacity: 1;
+
 }
 
 /*------------------------DONE-----------------------------*/
@@ -331,10 +374,12 @@ a {
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center center;
+
     }
 
+
     .foto {
-        width: 40vh;
+        max-width: 15em;
         padding: 0;
         margin-block-start: 20px;
 
@@ -344,25 +389,15 @@ a {
         box-shadow: 0 0 10px chocolate, 0 0 10px chocolate, 0 0 10px chocolate;
     }
 
-    footer {
-        margin: 0 auto;
-        padding: 10px;
-        background-color: #0e1014;
-
-    }
-
-    .conteudo-rodape {
-        font-size: 14pt;
-    }
 
     .conteudo-rodape img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
 
     }
 
     .rodape-media {
-       display: flex; 
+        display: flex;
         justify-content: center;
         font-size: 16pt;
         margin-top: 0.5em;
@@ -371,18 +406,13 @@ a {
     .rodape-media a {
         padding: 5px;
         color: chocolate;
-
+        opacity: 0.6;
     }
 
     .rodape-media a:hover {
-        box-shadow: 0 0 5px chocolate, 0 0 5px chocolate, 0 0 5px chocolate;
-        transition: 500ms;
-        z-index: 2;
+        opacity: 1;
     }
 
-    .topo-media {
-        display: none;
-    }
 
 }
 
@@ -397,9 +427,7 @@ a {
         margin-top: 9em;
     }
 
-    .foto {
-        width: 40vh;
-    }
+
 }
 
 /*-----------------------------------------------------------*/
@@ -418,17 +446,14 @@ a {
     }
 
     .conteudo-rodape {
-        font-size: 12pt;
+
         font-weight: lighter;
     }
 
-    .rodape-media {
-        font-size: 14pt;
-    }
 
     .conteudo-rodape img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
 
     }
 }
