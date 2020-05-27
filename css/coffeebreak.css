@@ -94,9 +94,6 @@ a {
     margin-top: 10px;
     box-shadow: 0 0 10px #6C63FF;
 
-
-
-
 }
 
 .menu a {
@@ -345,6 +342,7 @@ footer::after {
     .imagem figcaption{
         opacity: 1;
 
+}
 }
 
 /*------------------------DONE-----------------------------*/
