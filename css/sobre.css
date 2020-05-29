@@ -93,7 +93,7 @@ a {
 }
 
 .descricao p {
-    text-align: justify;
+    text-align: left;
     font-size: 13pt;
     line-height: 2em;
     padding: 20px;

@@ -30,7 +30,7 @@ body {
     height: 100%;
     background-color: #171a21;
     scroll-behavior: smooth;
-    
+
 
 
 }
@@ -63,25 +63,52 @@ a {
 
 }
 
+/*ul*/
 .menu {
-    width: 100%;
-}
-
-.menu ul {
+    list-style: none;
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
-    margin-top: 15px;
+    align-items: center;
+    width: 100%;
+    margin-right: 1.1em;
 
 }
 
 .menu li {
-    list-style: none;
-    opacity: 0.5;
+    position: relative;
+
 }
 
-.menu li:hover {
+.menu li a {
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    padding: 5px 15px;
+    opacity: 0.6;
+}
+
+.menu li a:hover {
     opacity: 1;
+}
+
+/*Submenu*/
+.menu li ul {
+    margin-top: 5px;
+    position: absolute;
+    background-color: #171a21;
+    display: none;
+}
+
+/*Submenu*/
+.menu li:hover ul {
+    display: block;
+}
+
+/*Submenu*/
+.menu li ul li {
+    list-style: none;
+    width: 150px;
+    line-height: 1.5em;
+
 }
 
 /*Efeito botão de menu*/
@@ -91,23 +118,13 @@ a {
     height: 3px;
     background-color: #6C63FF;
     transition: 500ms;
-    margin-top: 10px;
     box-shadow: 0 0 10px #6C63FF;
 
 }
 
-.menu a {
-    transition: background-color, 0.2s, color 0.2s;
-    color: whitesmoke;
-    padding: 2px 25px;
-
-}
 
 /*subcabeçalho*/
 .subcabecalho {
-    top: 0;
-    left: 0;
-    right: 0;
     height: 25em;
     background-image: url(https://images8.alphacoders.com/512/thumb-1920-512976.jpg);
     background-repeat: no-repeat;
@@ -115,6 +132,7 @@ a {
     background-position: center;
     opacity: 0.9;
     display: flex;
+
 }
 
 
@@ -150,7 +168,6 @@ a {
     }
 }
 
-
 .container-galeria {
     margin: 1.5em;
     background-image: radial-gradient(ellipse farthest-side, rgba(0, 110, 255, 0.397), transparent);
@@ -177,25 +194,27 @@ a {
 .foto:hover {
     box-shadow: 0 0 10px #6C63FF, 0 0 10px #6C63FF, 0 0 10px darkblue;
     transition: 500ms;
-    
+
 
 }
+
 /*legenda imagens */
-.imagem figcaption{
+.imagem figcaption {
     opacity: 0;
     color: whitesmoke;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
-    transition: opacity 500ms;
+    transition: 500ms;
     z-index: 2;
     margin-top: -35px;
     margin-left: 1em;
     font-size: 12pt;
     font-weight: normal;
 }
-.imagem:hover figcaption{
+
+.imagem:hover figcaption {
     opacity: 1;
-    
+
 }
 
 /*-------------------------------------*/
@@ -339,10 +358,10 @@ footer::after {
         height: 80px;
     }
 
-    .imagem figcaption{
+    .imagem figcaption {
         opacity: 1;
 
-}
+    }
 }
 
 /*------------------------DONE-----------------------------*/
