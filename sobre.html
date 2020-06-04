@@ -2,68 +2,89 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
     <title>Sobre</title>
-    <link rel="stylesheet" href="css/sobre.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/sobre.css">
+    <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon"
         href="https://cdn3.iconfinder.com/data/icons/social-70/24/381_-_Social_coffee_cup_icon-512.png"
         type="image/x-icon">
-    <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
 </head>
 
 <body>
-    <div class="voltar">
-        <a href="index.html"><i class="fas fa-home"></i></a>
+    
+
+    <div class="barratopo">
+        <ul class="menu">
+            <li><a href="index.html">Voltar</a></li>
+            <!-- div para criar uma parra vertical no menu-->
+            <div class="barravertical">
+            </div>
+            <li><a href="#">Copyright</a></li>
+            <div class="barravertical">
+            </div>
+            <li><a href="#vista">Aprecie a vista</a></li>
+        </ul>
     </div>
-    <div class="container-descricao">
-        <div class="descricao">
-            <div class="intro">
-                <span>Se você chegou até aqui, provavelmente quer saber um pouco mais sobre o projeto
-                    CoffeeBreak…
+
+    <!--Conteúdo sobre o autor-->
+    <article>
+        <div class="box-principal-autor">
+            <div class="box-sobre-autor">
+
+                <img class="minhafoto" src="sobre-fotos/me.jpg">
+                <p>Para começar este breve resumo, gostaria de me apresentar.
                     <br>
-                    Então vamos lá!</span>
+                    Eu me chamo Carlos Eduardo, Moro na cidade do Rio de Janeiro, tenho 24 anos e sou
+                    apaixonado
+                    por tecnologia <i class="fas fa-laptop"></i> e animais. <i class="fas fa-dog"></i></p>
+
+                <p> No final de 2018 tive um breve contato com a ferramenta PhotoShop em um emprego que
+                    tive em uma
+                    LanHouse, gostei da experiência e desde então resolvi estudar por completo a ferramenta e postar
+                    minhas
+                    manipulações no Instagram, Mas devido ao baixo reconhecimento por este tipo de conteúdo na
+                    plataforma,
+                    resolvi aprender um pouco de desenvolvimento web para criar um site com minhas ideias sem
+                    precisar
+                    gastar dinheiro com isso, e assim, publicar meu material e aprender algo novo durante a
+                    quarentena, Acabou que achei incrível e decidi me
+                    aprofundar
+                    mais no assunto e estudar pra valer.</p>
             </div>
-            <div class="container-foto">
-                <div class="foto">
-                    <img src="sobre-fotos/me.jpg">
-                </div>
-            </div>
-
-            <p>Para começar este breve resumo, gostaria de me apresentar.
-                <br>
-                Olá, eu me chamo <b>Carlos Eduardo.</b> Moro na cidade do Rio de Janeiro, tenho 24 anos e sou apaixonado
-                por tecnologia <i class="fas fa-laptop"></i> e animais <i class="fas fa-dog"></i></p>
-
-            <p> No final de 2018, tive um breve contato com a ferramenta <b>PhotoShop</b>, em um emprego que tive em uma
-                LanHouse, gostei da experiência e desde então resolvi estudar por completo a ferramenta e postar minhas
-                manipulações no Instagram. Mas devido ao baixo reconhecimento por este tipo de conteúdo no instagram,
-                resolvi aprender um pouco de <b>html</b> e <b>css</b> para criar um site com minhas ideias sem precisar
-                gastar dinheiro com isso, e assim, publicar meu material… Acabou que adorei a área e decidi me
-                aprofundar
-                mais no assunto.</p>
-
-            <p> Assistindo um canal no YouTube, conheci uma pataforma chamada <a href="https://www.alura.com.br/"
-                    target="_blank"><i>Alura</i></a>, que estava disponibilizando um curso gratuito de
-                <b>html</b> e <b>css</b>… não pensei duas vezes e fiz minha inscrição na hora. começei a estudar e por
-                em prática tudo de novo que estava aprendendo. E assim, aos poucos, o site vai ganhando seu conteúdo e
-                criando mais vida.
-            </p>
-
         </div>
+    </article>
+    <!--Conteúdo sobre o site-->
+    <article>
+        <div class="box-principal-site">
+            <div class="box-sobre-site">
+
+                <p>A curto prazo o projeto CoffeBreak foi criado com o intuito de divulgar manipulações criadas por mim
+                    com o Photoshop, mas durante o desenvolvimento da página, me veio os seguintes planos em mente; E se
+                    ao invés de publicar fotos feitas só por mim, também tivesse um espaço para artistas que querem
+                    divulgar seu trabalho de forma simples, sem gastar com isso e em uma plataforma totalmente
+                    brasileira? aonde os artistas tenham total reconhecimento pelo seu trabalho, e assim, encontrar o
+                    combustível para se manter motivados.
+                </p>
+
+
+            </div>
+        </div>
+    </article>
+
+    <div id="vista" class="vista">
+        <span>Aprecie a vista antes de sair!</span>
     </div>
 
     <footer>
         <div class="rodape">
-            <span>Made with <i class="fas fa-heart"></i> & <i class="fas fa-coffee"></i> in Rio de Janeiro by Carlos
+            <span>Feito com <i class="fas fa-heart"></i> por Carlos
                 Eduardo ©
                 2020</span>
-
         </div>
-
     </footer>
-
-
 
 </body>
 
