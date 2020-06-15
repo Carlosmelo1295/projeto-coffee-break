@@ -4,30 +4,38 @@
 <head>
     <title>CoffeeBreak</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/coffeebreak.css">
+    <link rel="stylesheet" href="css/coffeebreak.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"
-        href="https://cdn3.iconfinder.com/data/icons/social-70/24/381_-_Social_coffee_cup_icon-512.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="logos/mug_coffee.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
 
 </head>
 
 <body>
     <header>
-        <div id="top" class="cabecalho">
-            <a href="index.html"> <img src="logos/web-logo.png" alt="logo"></a>
+        <div id="top" class="container-cabecalho">
+            <a href="index.html"> <img src="logos/mug_coffee.png" alt="logo"></a>
 
             <ul class="menu">
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="#galeria">galeria</a>
+                <li class="linhas-menu"><a href="sobre.html">Sobre</a>
+                    <ul>
+                        <li><a href="direitos.html">Copyright</a></li>
+                        <li><a href="#">Agradecimentos</a></li>
+                    </ul>
+
+                </li>
+                <div class="barravertical"></div>
+                <li class="linhas-menu"><a href="#galeria">Galeria</a>
                     <ul>
                         <li><a href="#">Paisagens</a></li>
                         <li><a href="#">Fantasia</a></li>
                         <li><a href="#">Design</a></li>
                     </ul>
                 </li>
-                <li><a href="#contatos">Contato</a></li>
+                <div class="barravertical"></div>
+                <li class="linhas-menu"><a href="#contatos">Contato</a></li>
 
         </div>
 
@@ -42,12 +50,14 @@
 
     </div>
     <!--Começo da galeria de imagens-->
+
+
     <section>
         <div id="galeria" class="container-galeria">
-
+    
             <figure class="imagem">
-                <a target="_blank" href="background/skycastle.jpg">
-                    <img class="foto" src="background/skycastle.jpg" alt="Castelo">
+                <a href="background/skycastle.jpg">
+                    <img class="foto" src="background/skycastle.jpg" alt="Castelo nas nuvens">
                 </a>
                 <figcaption>
                     <span>Castelo nas nuvens</span>
@@ -55,7 +65,7 @@
             </figure>
 
             <figure class="imagem">
-                <a target="_blank" href="background/lost-in-the-space-com-camera-raw---Copia.jpg">
+                <a href="background/lost-in-the-space-com-camera-raw---Copia.jpg">
                     <img class="foto" src="background/lost-in-the-space-com-camera-raw---Copia.jpg"
                         alt="homen em um foguete">
                 </a>
@@ -74,7 +84,7 @@
             </figure>
 
             <figure class="imagem">
-                <a target="_blank" href="background/medieval.jpg">
+                <a href="background/medieval.jpg">
                     <img class="foto" src="background/medieval.jpg" alt="Medieval">
                 </a>
                 <figcaption>
@@ -83,7 +93,7 @@
             </figure>
 
             <figure class="imagem">
-                <a target="_blank" href="background/florest2.jpg">
+                <a href="background/florest2.jpg">
                     <img class="foto" src="background/florest2.jpg" alt="Mulher observando uma fogueira">
                 </a>
                 <figcaption>
@@ -92,7 +102,7 @@
             </figure>
 
             <figure class="imagem">
-                <a target="_blank" href="background/magicselect.jpg">
+                <a href="background/magicselect.jpg">
                     <img class="foto" src="background/magicselect.jpg" alt="Magia">
                 </a>
                 <figcaption>
@@ -108,21 +118,16 @@
 
         <div id="contatos" class="conteudo-rodape">
             <a href="https://github.com/Tklao/projeto-coffee-break" target="_blank"><img
-                    src="logos/iconfinder_githubpx_85137.png"></a>
+                    src="logos/iconfinder_githubpx_85137.png" alt="logo github"></a>
             <a href="https://www.instagram.com/coffeebreak.art/" target="_blank"><img
-                    src="logos/iconfinder_Instagram_1298747.png"></a>
+                    src="logos/iconfinder_Instagram_1298747.png" alt="logo instagram"></a>
             <p id="report">Reporte bugs encontrados <a
                     href="mailto:carlosmelo1295@gmail.com">carlosmelo1295@gmail.com</a></p>
             <span>Agradecemos por sua visita!!! Página em constante manutenção.</span>
             <br>
-            <span>Made with <i class="fas fa-heart"></i> & <i class="fas fa-coffee"></i> in Rio de Janeiro ©
+            <span>Feito com <i class="fas fa-heart"></i> & <i class="fas fa-coffee"></i> por Carlos Eduardo ©
                 2020</span>
             <br>
-
-            <div class="rodape-media">
-                <a href="#top"><i class="fas fa-arrow-alt-circle-up"></i>Topo</a>
-                <a href="sobre.html"><i class="fas fa-mug-hot">Sobre</i></a>
-            </div>
 
         </div>
     </footer>

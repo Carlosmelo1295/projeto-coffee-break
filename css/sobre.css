@@ -7,16 +7,16 @@
 
 html,
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Colfax", sans-serif;
+    font-weight: 400;
     width: 100%;
     height: 100%;
-    background-image: url(https://images.freeimages.com/images/large-previews/840/space-halo-1-1626963.jpg);
+   background-image: url(../sobre-fotos/fundo.jpg); 
+   background-size: 100%;
+  
+   
     color: #ffffff;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    scroll-behavior: smooth;
+    
 }
 
 .barratopo {
@@ -24,7 +24,7 @@ body {
     height: 50px;
     display: flex;
     position: fixed;
-    background-color: #0c0c0c;
+    background-color:transparent;
 }
 
 /*ul*/
@@ -36,43 +36,31 @@ body {
     margin-left: 40px;
 
 }
-
-/*barra vertical para separar o menu*/
-.barravertical{
-    width: 2px;
-    height: 20px;
-    background-color: rgba(75, 75, 75, 0.34);
-}
-
-.menu li,
-a {
-    list-style: none;
-    margin: 7px;
-    font-weight: 600;
+a{
     color:#ffffff;
+}
+
+.menu li{
+    list-style: none;
     opacity: 0.7;
-    font-size: 1em;
+    letter-spacing: 1px;
+    font-size: 11pt;
+    font-weight: normal;
     text-transform: uppercase;
-    font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-
+    padding: 15px;
+    border: solid 1px #16a7f6;
+    border-radius: 30px;
 }
 
-/*Barra inferios que aparece quando passa o mouse sobre o menu*/
-.menu li:hover::after {
-    content: '';
-    display: block;
-    height: 2px;
-    margin-top: 5px;
-    background-color:rgba(75, 75, 75, 0.34);
-    transition: 500ms;
-
-}
-
-.menu li,
-a:hover {
+.menu li:hover {
     opacity: 1;
-   
+    background-color: #16a7f6;
+    overflow: hidden;
 
+}
+
+.fa-home{
+    margin-right: 5px;
 }
 
 .box-principal-autor {
@@ -121,6 +109,7 @@ a:hover {
     line-height: 1.5;
     padding: 20px;
     letter-spacing: 1px;
+    font-weight: normal;
 
 }
 
@@ -161,6 +150,7 @@ a:hover {
     line-height: 1.5;
     padding: 20px;
     letter-spacing: 1px;
+    font-weight: normal;
 }
 
 .rodape {
@@ -169,7 +159,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: 50px;
     padding: 10px;
 }
 
@@ -200,61 +190,4 @@ a:hover {
 
 .fa-dog{
     color: sandybrown;
-}
-
-.vista{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: x-large;
-    font-family: 'Courier New', Courier, monospace;
-    animation: fotos 40s cubic-bezier(1, 1, 1, 1) infinite;
-    
-}
-
-@keyframes fotos{
-
-    10% {
-       background-color: rgba(255, 166, 0, 0);
-       
-    }
-
-    20% {
-       background-color:rgba(255, 166, 0, 0.247);
-    }
-
-   30% {
-        background-color: rgba(255, 166, 0, 0.377);
-
-    }
-
-    40% {
-       background-color:rgba(255, 166, 0, 0.596);
-    }
-
-    50% {
-        background-color: rgba(255, 166, 0, 0.555);
-    }
-
-    60% {
-        background-color:rgba(0, 140, 255, 0.11);
-    }
-
-    70% {
-        background-color:rgba(0, 140, 255, 0.281);
-    }
-
-    80% {
-        background-color: rgba(0, 140, 255, 0.445)
-    }
-
-    90% {
-        background-color: rgba(0, 0, 0, 0.274);
-    }
-
-    100% {
-        background-color: rgba(0, 0, 0, 0.048);
-    }
 }

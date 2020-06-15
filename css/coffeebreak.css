@@ -24,7 +24,7 @@
 html,
 body {
     font-size: 14pt;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Colfax", sans-serif;
     font-weight: 400;
     width: 100%;
     height: 100%;
@@ -41,27 +41,30 @@ a {
 }
 
 /*barra que contem o logo e o menu */
-.cabecalho {
+.container-cabecalho {
     background: #171a21;
     display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
+    z-index: 200;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
-    position: relative;
+    position: fixed;
+    width: 100%;
 
 
 }
 
-.cabecalho img {
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 180px;
+.container-cabecalho img {
+    margin-top: 5px;
+    margin-left: 40px;
+    width: 55px;
     height: auto;
+    opacity: 1;
 
 }
+
+.container-cabecalho img:hover {
+    opacity: 0.8;
+}
+
 
 /*ul*/
 .menu {
@@ -70,8 +73,16 @@ a {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    margin-right: 1.1em;
+    margin-right: 1em;
+    font-size: 10pt;
 
+
+}
+
+.barravertical {
+    width: 2px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.11);
 }
 
 .menu li {
@@ -80,46 +91,68 @@ a {
 }
 
 .menu li a {
-    color: rgb(255, 253, 253);
+    color: #fff;
     text-decoration: none;
-    padding: 5px 15px;
-    opacity: 0.6;
+    padding: 20px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: normal;
+
 }
 
 .menu li a:hover {
     opacity: 1;
+    color: #16a7f6;
 }
+
+/*Efeito botão de menu*/
+.menu .linhas-menu:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    height: 1px;
+    background-color: #16a7f6;
+    box-shadow: 0 0 10px #16a7f6;
+    animation: barra cubic-bezier(1, 1, 1, 1) 500ms;
+
+}
+
 
 /*Submenu*/
 .menu li ul {
-    margin-top: 5px;
+    margin-top: 22px;
     position: absolute;
     background-color: #171a21;
     display: none;
+    text-align: center;
+    font-size: 11pt;
+    list-style: none;
+    line-height: 2.5em;
+
 }
 
 /*Submenu*/
 .menu li:hover ul {
     display: block;
-}
-
-/*Submenu*/
-.menu li ul li {
-    list-style: none;
-    width: 150px;
-    line-height: 1.5em;
 
 }
 
-/*Efeito botão de menu*/
-.menu li:hover::after {
-    content: '';
-    display: block;
-    height: 1.5px;
-    background-color: #6C63FF;
-    transition: 500ms;
-    box-shadow: 0 0 10px #6C63FF;
-    margin-top: 5px;
+
+@keyframes barra {
+    0% {
+        width: 10px;
+    }
+
+    50% {
+        width: 50px;
+    }
+
+    100% {
+        width: 100px;
+    }
 
 }
 
@@ -127,12 +160,13 @@ a {
 /*subcabeçalho*/
 .subcabecalho {
     height: 25em;
-    background-image: url(https://images8.alphacoders.com/512/thumb-1920-512976.jpg);
+    background-image: url(https://images.pexels.com/photos/2874066/pexels-photo-2874066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     opacity: 0.9;
     display: flex;
+
 
 }
 
@@ -140,14 +174,16 @@ a {
 /* tag para selecionar o h1 dentro do subcabeçalho*/
 
 .subtitle h1 {
-    color: whitesmoke;
-    letter-spacing: 1pt;
-    font-size: 3.9vw;
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 34px;
     text-shadow: 5px 5px 5px #1d1e1f;
-    font-weight: 900;
-    justify-content: center;
-    margin-top: 5.5em;
+    font-weight: 300;
+    margin-top: 7em;
     margin-left: 1em;
+    text-transform: uppercase;
+    text-align: center;
+
 
 }
 
@@ -170,15 +206,14 @@ a {
 }
 
 .container-galeria {
-    margin: 1.5em;
-    background-image: radial-gradient(ellipse farthest-side, rgba(0, 110, 255, 0.397), transparent);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
+    padding: 40px;
     display: flex;
     justify-content: space-evenly;
     overflow: hidden;
     flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 188px;
+    background-color: #171a21;
 
 }
 
@@ -187,15 +222,12 @@ a {
     height: auto;
     transition: 500ms;
     margin-top: 0.8em;
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
 
-
 .foto:hover {
-    box-shadow: 0 0 10px #6C63FF, 0 0 10px #6C63FF, 0 0 10px darkblue;
-    transition: 500ms;
-
+    filter: brightness(60%);
 
 }
 
@@ -203,13 +235,12 @@ a {
 .imagem figcaption {
     opacity: 0;
     color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0);
     position: absolute;
-    transition: 500ms;
+    transition: cubic-bezier(1, 1, 1, 1) 500ms;
     z-index: 2;
     margin-top: -35px;
     margin-left: 1em;
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: normal;
 }
 
@@ -228,15 +259,18 @@ footer {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: -100;
 
 }
 
 footer::after {
     content: '';
     display: block;
-    height: 2px;
+    height: 1px;
     width: 100%;
-    background-color: #574473;
+    background-color: #ffffff6b;
     position: absolute;
 }
 
@@ -252,15 +286,19 @@ footer::after {
 
 
 #report a {
-    color: cornflowerblue;
+    color: #16a7f6;
     opacity: 0.6;
-
+    border: 1px solid #16a7f6;
+    padding: 5px;
+    border-radius: 20px;
 }
+
 
 #report a:hover {
     opacity: 1;
-}
 
+
+}
 
 /*fotos media*/
 .conteudo-rodape img {
@@ -278,13 +316,27 @@ footer::after {
 
 /*ícone de coração*/
 .fa-heart {
-    color: rgb(172, 19, 19);
+    color: red;
+    animation: piscarcoracao 1s linear infinite;
 }
 
+@keyframes piscarcoracao {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 /*ícone café*/
 .fa-coffee {
-    color: cornflowerblue;
+    color: rgb(151, 111, 82);
 }
 
 /*ícones menu principal*/
@@ -301,14 +353,6 @@ footer::after {
     color: cornflowerblue;
 }
 
-/*---------------------DONE------------------------------------*/
-@media (min-width: 600px) {
-    .rodape-media {
-        display: none;
-
-    }
-
-}
 
 /*--------------------DONE-------------------------------*/
 @media (max-width: 1024px) {
@@ -319,18 +363,22 @@ footer::after {
     }
 
     .subtitle h1 {
-        font-size: 2.4em;
+        font-size: 1.5em;
+        line-height: 60px;
         margin-right: 1em;
         margin-top: 7em;
         color: rgb(255, 255, 255);
-        background-color: rgba(0, 0, 0, 0.466);
         border-radius: 5px;
         padding: 2px;
     }
 
     .conteudo-rodape img {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .container-galeria{
+        margin-bottom: 198px;
     }
 }
 
@@ -343,8 +391,8 @@ footer::after {
     }
 
     .subtitle h1 {
-        font-size: 1.8em;
-        margin-top: 8em;
+        font-size: 1.4em;
+        margin-top: 6.5em;
     }
 
 
@@ -355,26 +403,28 @@ footer::after {
     }
 
     .conteudo-rodape img {
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: auto;
     }
 
     .imagem figcaption {
         opacity: 1;
 
     }
+
+    .container-galeria{
+        margin-bottom: 320px;
+    }
+
 }
 
 /*------------------------DONE-----------------------------*/
 @media (max-width: 600px) {
 
     .subtitle h1 {
-        font-size: 1.3em;
+        font-size: 20px;
         margin-top: 7em;
-    }
-
-    .menu {
-        display: none;
+        line-height: 40px;
     }
 
     .cabecalho {
@@ -383,18 +433,10 @@ footer::after {
         align-items: center;
     }
 
+
     .subcabecalho {
         height: 300px;
     }
-
-    .galeria {
-        background-image: radial-gradient(ellipse farthest-side, rgba(238, 140, 11, 0.274), transparent);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-
-    }
-
 
     .foto {
         max-width: 15em;
@@ -403,32 +445,9 @@ footer::after {
 
     }
 
-    .foto:hover {
-        box-shadow: 0 0 10px chocolate, 0 0 10px chocolate, 0 0 10px chocolate;
-    }
 
-
-    .conteudo-rodape img {
-        width: 60px;
-        height: 60px;
-
-    }
-
-    .rodape-media {
-        display: flex;
-        justify-content: center;
-        font-size: 16pt;
-        margin-top: 0.5em;
-    }
-
-    .rodape-media a {
-        padding: 5px;
-        color: chocolate;
-        opacity: 0.6;
-    }
-
-    .rodape-media a:hover {
-        opacity: 1;
+    .menu li a {
+        font-size: 8pt;
     }
 
 
@@ -441,8 +460,24 @@ footer::after {
     }
 
     .subtitle h1 {
-        font-size: 1em;
-        margin-top: 9em;
+        font-size: 15px;
+        margin-top: 8em;
+    }
+
+    .menu li a {
+        font-size: 7px;
+        padding: 12px;
+
+
+    }
+
+    .barravertical {
+        height: 10px;
+        margin-top: 5px;
+    }
+
+    .container-galeria{
+        margin-bottom: 300px;
     }
 
 
@@ -451,16 +486,13 @@ footer::after {
 /*-----------------------------------------------------------*/
 @media (max-width: 320px) {
     .subtitle h1 {
-        font-size: 12PT;
-        margin-top: 7em;
-    }
-
-    .cabecalho img {
-        width: 120px;
+        font-size: 10px;
+        margin-top: 15em;
+        line-height: 20px;
     }
 
     .subcabecalho {
-        height: 200px;
+        height: 300px;
     }
 
     .conteudo-rodape {
@@ -473,5 +505,19 @@ footer::after {
         width: 50px;
         height: 50px;
 
+    }
+
+    .menu li a {
+        font-size: 5px;
+        padding: 12px;
+    }
+
+    .barravertical {
+        height: 9px;
+        margin-top: 5px;
+    }
+
+    .container-galeria{
+        margin-bottom: 320px;
     }
 }
