@@ -23,7 +23,6 @@
             <ul class="menu">
                 <li class="linhas-menu"><a href="sobre.html">Sobre</a>
                     <ul>
-                        <li><a href="direitos.html">Copyright</a></li>
                         <li><a href="#">Agradecimentos</a></li>
                     </ul>
 
@@ -42,7 +41,7 @@
 
 
             <ul class="menu-mobile">
-                <li><i class="far fa-caret-square-down" onclick="mudar()"></i></li>
+                <li><i class="fas fa-align-justify" onclick="mudar()"></i></li>
                 <ul class="sub">
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Copyright</a></li>
@@ -66,60 +65,48 @@
     <section>
         <div id="galeria" class="container-galeria">
 
-            <figure class="imagem">
-                <a href="background/skycastle.jpg" target="_blank">
-                    <img class="foto" src="background/skycastle.jpg" alt="Castelo nas nuvens">
-                </a>
-                <figcaption>
-                    <span>Castelo nas nuvens</span>
-                </figcaption>
-            </figure>
+            <ul class="galeria">
 
-            <figure class="imagem">
-                <a href="background/lost-in-the-space-com-camera-raw---Copia.jpg" target="_blank">
-                    <img class="foto" src="background/lost-in-the-space-com-camera-raw---Copia.jpg"
-                        alt="homen em um foguete">
-                </a>
-                <figcaption>
-                    <span>Ao céu e avante!</span>
-                </figcaption>
-            </figure>
+                <li><a href="background/florest2.jpg"><img class="foto" src="background/florest2.jpg"
+                            alt="Mulher observando uma fogueira" /></a>
+                    <p>Olhar atento.</p>
+                </li>
 
-            <figure class="imagem">
-                <a target="_blank" href="background/skate-mar-aberto.jpg" target="_blank">
-                    <img class="foto" src="background/skate-mar-aberto.jpg" alt="skate no mar">
-                </a>
-                <figcaption>
-                    <span>Skate é criatividade</span>
-                </figcaption>
-            </figure>
+                <li><a href="background/lost-in-the-space-com-camera-raw---Copia.jpg"><img class="foto"
+                            src="background/lost-in-the-space-com-camera-raw---Copia.jpg"
+                            alt="Homen sentado em um foguete" /></a>
+                    <p>Para o Alto e Avante!</p>
+                </li>
 
-            <figure class="imagem">
-                <a href="background/medieval.jpg" target="_blank">
-                    <img class="foto" src="background/medieval.jpg" alt="Medieval">
-                </a>
-                <figcaption>
-                    <span>apreciando a vista</span>
-                </figcaption>
-            </figure>
+                <li><a href="background/medieval.jpg"><img class="foto" src="background/medieval.jpg"
+                            alt="olhando pela janela" /></a>
+                    <p>Apreciando a vista da janela mais alta de Hogwarts</p>
+                </li>
 
-            <figure class="imagem">
-                <a href="background/florest2.jpg" target="_blank">
-                    <img class="foto" src="background/florest2.jpg" alt="Mulher observando uma fogueira">
-                </a>
-                <figcaption>
-                    <span>Olhar atento</span>
-                </figcaption>
-            </figure>
+                <li><a href="background/magicselect.jpg"><img class="foto" src="background/magicselect.jpg"
+                            alt="image" /></a>
+                    <p>Crianças, a ficção é a verdade dentro da mentira, e a verdade desta ficção é bem simples: a magia
+                        existe.</p>
+                </li>
 
-            <figure class="imagem">
-                <a href="background/magicselect.jpg" target="_blank">
-                    <img class="foto" src="background/magicselect.jpg" alt="Magia">
-                </a>
-                <figcaption>
-                    <span>Inspirado na saga Harry potter</span>
-                </figcaption>
-            </figure>
+                <li><a href="background/skate-mar-aberto.jpg"><img class="foto" src="background/skate-mar-aberto.jpg"
+                            alt="Andando de skate no mar" /></a>
+                    <p>Skate é criatividade.</p>
+                </li>
+
+                <li><a href="background/spacecar.jpg"><img class="foto" src="background/spacecar.jpg"
+                            alt="Carro no espaço" /></a>
+                    <p>Carro espacial.</p>
+                </li>
+
+                <li><a href="background/SpaceMan.jpg"><img class="foto" src="background/SpaceMan.jpg"
+                            alt="Astronauta na lua" /></a>
+                    <p>Um pequeno passo para o homem mas um grande passo para a humanidade.</p>
+                </li>
+
+            </ul>
+
+
         </div>
     </section>
     <!--Fim galeria-->
@@ -128,15 +115,20 @@
     <footer>
 
         <div id="contatos" class="conteudo-rodape">
-            <a href="https://github.com/Tklao/projeto-coffee-break" target="_blank"><img
-                    src="logos/iconfinder_githubpx_85137.png" alt="logo github"></a>
-            <a href="https://www.instagram.com/coffeebreak.art/" target="_blank"><img
-                    src="logos/iconfinder_Instagram_1298747.png" alt="logo instagram"></a>
+
             <p id="report">Reporte bugs encontrados <a
                     href="mailto:carlosmelo1295@gmail.com">carlosmelo1295@gmail.com</a></p>
-            <span>Agradecemos por sua visita!!! Página em constante manutenção.</span>
+            <span>Agradecemos por sua visita!<br> Página em constante manutenção.</span>
             <br>
-            <span>Feito com <i class="fas fa-heart"></i> & <i class="fas fa-coffee"></i> por Carlos Eduardo ©
+            <div class="redes">
+                <a href="https://github.com/Tklao/projeto-coffee-break" target="_blank"><i
+                        class="fab fa-github-square"></i></a>
+                <a href="https://www.instagram.com/coffeebreak.art/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+
+                <a href="direitos.html"><button class="botao">Direitos</button></a>
+            </div>
+            <span>Feito com <i class="fas fa-heart"></i> por Carlos Eduardo ©
                 2020</span>
             <br>
 

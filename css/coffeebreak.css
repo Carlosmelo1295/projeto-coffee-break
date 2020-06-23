@@ -24,7 +24,7 @@
 html,
 body {
     font-size: 14pt;
-    font-family: "Colfax", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-weight: 400;
     width: 100%;
     height: 100%;
@@ -44,7 +44,7 @@ a {
 .container-cabecalho {
     background: #171a21;
     display: flex;
-    z-index: 200;
+    z-index: 20000;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
     position: fixed;
     width: 100%;
@@ -167,9 +167,7 @@ a {
     opacity: 0.9;
     display: flex;
 
-
 }
-
 
 /* tag para selecionar o h1 dentro do subcabeçalho*/
 
@@ -178,12 +176,12 @@ a {
     letter-spacing: 10px;
     font-size: 34px;
     text-shadow: 5px 5px 5px #1d1e1f;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 7em;
     margin-left: 1em;
     text-transform: uppercase;
     text-align: center;
-
+    font-family: "Colfax", sans-serif;
 
 }
 
@@ -205,58 +203,70 @@ a {
     }
 }
 
+/*div que envolve a galeria*/
 .container-galeria {
-    padding: 40px;
+    width: 100%;
+    margin-bottom: 200px;
+    background-color: #171a21;
+    margin-top: 50px;
+
+}
+
+/*class para manipular ul*/
+.galeria {
     display: flex;
     justify-content: space-evenly;
     overflow: hidden;
     flex-wrap: wrap;
-    position: relative;
-    margin-bottom: 188px;
-    background-color: #171a21;
+    list-style: none;
 
 }
 
+.galeria li {
+    position: relative;
+}
+
+/*class para manipular a legenda da foto*/
+.galeria li p {
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    left: 50px;
+    right: 50px;
+    opacity: 0;
+    transition: 500ms cubic-bezier(1, 1, 1, 1);
+
+}
+
+.galeria li:hover p {
+    opacity: 1;
+
+}
+
+/*class para manipular foto*/
 .foto {
     max-width: 20em;
     height: auto;
     transition: 500ms;
     margin-top: 0.8em;
     border-radius: 3px;
-
 }
 
 .foto:hover {
-    filter: brightness(60%);
-
-}
-
-/*legenda imagens */
-.imagem figcaption {
-    opacity: 0;
-    color: whitesmoke;
-    position: absolute;
-    transition: cubic-bezier(1, 1, 1, 1) 500ms;
-    z-index: 2;
-    margin-top: -35px;
-    margin-left: 1em;
-    font-size: 11pt;
-    font-weight: normal;
-}
-
-.imagem:hover figcaption {
-    opacity: 1;
+    filter: brightness(50%);
 
 }
 
 /*-------------------------------------*/
-
 footer {
     width: 100%;
-    margin: auto;
     font-size: 12pt;
     background-color: #0e1014;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -264,16 +274,6 @@ footer {
     z-index: -100;
 
 }
-
-footer::after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: #ffffff6b;
-    position: absolute;
-}
-
 
 .conteudo-rodape {
     text-align: center;
@@ -285,43 +285,91 @@ footer::after {
     letter-spacing: 1px;
     font-size: 13px;
 
-
 }
-
 
 #report a {
     color: #16a7f6;
     opacity: 0.6;
     border: 1px solid #16a7f6;
-    padding: 5px;
+    padding: 3px;
     border-radius: 20px;
 }
 
-
 #report a:hover {
     opacity: 1;
-
-
 }
-
-/*fotos media*/
-.conteudo-rodape img {
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    opacity: 0.5;
-}
-
-.conteudo-rodape img:hover {
-    opacity: 1;
-
-}
-
 
 /*ícone de coração*/
 .fa-heart {
     color: red;
     animation: piscarcoracao 1s linear infinite;
+    font-size: 20px;
+}
+
+/*div que envolve os logos do rodapé*/
+.redes {
+    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 6px;
+
+}
+
+.redes::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(245, 245, 245, 0.568);
+}
+
+.botao {
+    position: absolute;
+    left: 200px;
+    border: none;
+    opacity: 0.6;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.botao:hover {
+    color: #16a7f6;
+    opacity: 1;
+
+}
+
+/*logo git*/
+.fa-github-square {
+    color: whitesmoke;
+    opacity: 0.6;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 50px;
+
+}
+
+.fa-github-square:hover {
+    opacity: 1;
+    color: #16a8f6a9;
+
+}
+
+/*logo instagram*/
+.fa-instagram {
+    color: whitesmoke;
+    opacity: 0.6;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+.fa-instagram:hover {
+    opacity: 1;
+    color: #16a8f6a9;
+
 }
 
 @keyframes piscarcoracao {
@@ -338,18 +386,11 @@ footer::after {
     }
 }
 
-/*ícone café*/
-.fa-coffee {
-    color: rgb(151, 111, 82);
-}
-
-
 @media (min-width: 1024px) {
     .menu-mobile {
         display: none;
     }
 }
-
 
 /*--------------------DONE-------------------------------*/
 @media (max-width: 1024px) {
@@ -373,22 +414,23 @@ footer::after {
         padding: 2px;
     }
 
-    .conteudo-rodape img {
-        width: 65px;
-        height: 65px;
-    }
-
     .container-galeria {
-        margin-bottom: 198px;
+        margin-bottom: 250px;
     }
 
-    .fa-caret-square-down {
-        font-size: 38px;
+    .fa-align-justify {
+        font-size: 32px;
         color: #fff;
         opacity: 0.7;
+        
     }
 
-    .fa-caret-square-down:hover {
+    .fa-align-justify:active {
+        color: #16a7f6;
+
+    }
+
+    .fa-align-justify:hover {
         opacity: 1;
     }
 
@@ -427,7 +469,7 @@ footer::after {
 
         0% {
             width: 0%;
-           
+
         }
 
         100% {
@@ -442,11 +484,19 @@ footer::after {
 
     }
 
+    .menu-mobile ul li::after {
+        content: '';
+        display: block;
+        background-color: rgba(245, 245, 245, 0.288);
+        width: 100%;
+        height: 1px;
+        margin-top: 5px;
+    }
+
     .menu-mobile a:hover {
         color: #16a7f6;
     }
 }
-
 
 /*---------------------DONE-------------------------------*/
 @media (max-width: 800px) {
@@ -460,29 +510,15 @@ footer::after {
         margin-top: 6.5em;
     }
 
-
     .conteudo-rodape {
         margin-top: 2.8em;
         position: relative;
 
     }
 
-    .conteudo-rodape img {
-        width: 60px;
-        height: auto;
-    }
-
-    .imagem figcaption {
-        opacity: 1;
-
-    }
-
     .container-galeria {
         margin-bottom: 200px;
     }
-
-
-
 }
 
 /*------------------------DONE-----------------------------*/
@@ -507,11 +543,8 @@ footer::after {
 
     .foto {
         max-width: 15em;
-        padding: 0;
-        margin-block-start: 20px;
-
+         
     }
-
 
 }
 
@@ -526,7 +559,6 @@ footer::after {
         margin-top: 8em;
     }
 
-
     .barravertical {
         height: 10px;
         margin-top: 5px;
@@ -536,6 +568,27 @@ footer::after {
         margin-bottom: 300px;
     }
 
+    .conteudo-rodape {
+        line-height: 2.8em;
+
+    }
+
+    .redes {
+        font-size: 20px;
+    }
+
+    .fa-github-square {
+        padding: 5px;
+    }
+
+    .fa-instagram {
+        padding: 5px;
+        margin-left: 8px;
+    }
+
+    .botao {
+        padding: 3px;
+    }
 
 }
 
@@ -554,15 +607,8 @@ footer::after {
     .conteudo-rodape {
         font-size: 9px;
         margin: 0 10px;
+        margin-top: 10px;
     }
-
-
-    .conteudo-rodape img {
-        width: 50px;
-        height: 50px;
-
-    }
-
 
     .barravertical {
         height: 9px;
@@ -570,6 +616,6 @@ footer::after {
     }
 
     .container-galeria {
-        margin-bottom: 170px;
+        margin-bottom: 180px;
     }
 }
