@@ -42,7 +42,7 @@ a {
 
 /*barra que contem o logo e o menu */
 .container-cabecalho {
-    background: #171a21;
+    background: #0e1014;
     display: flex;
     z-index: 20000;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
@@ -156,21 +156,31 @@ a {
 
 }
 
-
 /*subcabeçalho*/
 .subcabecalho {
-    height: 25em;
+    height: 28em;
     background-image: url(https://images.pexels.com/photos/2874066/pexels-photo-2874066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    opacity: 0.9;
     display: flex;
+    position: relative;
 
 }
 
-/* tag para selecionar o h1 dentro do subcabeçalho*/
+/*filtro para deixar a foto do submenu com menos iluminação*/
+.subcabecalho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.493);
 
+}
+
+/* class para selecionar o h1 dentro do subcabeçalho*/
 .subtitle h1 {
     color: #fff;
     letter-spacing: 10px;
@@ -182,6 +192,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     font-family: "Colfax", sans-serif;
+    position: absolute;
 
 }
 
@@ -203,12 +214,12 @@ a {
     }
 }
 
+
 /*div que envolve a galeria*/
 .container-galeria {
     width: 100%;
     margin-bottom: 200px;
     background-color: #171a21;
-    margin-top: 50px;
 
 }
 
@@ -220,6 +231,55 @@ a {
     flex-wrap: wrap;
     list-style: none;
 
+
+}
+
+/*frase (fotos em destaque)*/
+.destaque {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0e1014;
+    padding: 10px;
+}
+
+.destaque span {
+    color: whitesmoke;
+    font-size: 1em;
+    letter-spacing: 5px;
+    animation: luzes 4s cubic-bezier(1, 1, 1, 1) infinite;
+
+}
+
+/*frame para animar a frase (Fotos em destaque*/
+@keyframes luzes {
+    0% {
+        color: rgba(55, 137, 214, 0.76);
+    }
+
+    30% {
+        color: #6c63ff;
+
+    }
+
+    60% {
+        color: midnightblue;
+    }
+
+    80% {
+        color: chocolate;
+
+    }
+
+    90% {
+        color: #f61616;
+    }
+
+    100% {
+        color: rgba(55, 137, 214, 0.952);
+    }
 }
 
 .galeria li {
@@ -232,14 +292,15 @@ a {
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 10px;
+    text-align: center;
     position: absolute;
-    top: 20px;
+    top: 100px;
     z-index: 2;
     left: 50px;
     right: 50px;
     opacity: 0;
     transition: 500ms cubic-bezier(1, 1, 1, 1);
+    line-height: 25px;
 
 }
 
@@ -255,12 +316,15 @@ a {
     transition: 500ms;
     margin-top: 0.8em;
     border-radius: 3px;
+
+
 }
 
 .foto:hover {
     filter: brightness(50%);
 
 }
+
 
 /*-------------------------------------*/
 footer {
@@ -329,21 +393,20 @@ footer {
     position: absolute;
     left: 200px;
     border: none;
-    opacity: 0.6;
     padding: 6px;
     border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .botao:hover {
-    color: #16a7f6;
-    opacity: 1;
+    filter: brightness(50%);
 
 }
 
 /*logo git*/
 .fa-github-square {
     color: whitesmoke;
-    opacity: 0.6;
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 50px;
@@ -351,15 +414,13 @@ footer {
 }
 
 .fa-github-square:hover {
-    opacity: 1;
-    color: #16a8f6a9;
+    filter: brightness(50%);
 
 }
 
 /*logo instagram*/
 .fa-instagram {
     color: whitesmoke;
-    opacity: 0.6;
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 50px;
@@ -367,8 +428,7 @@ footer {
 }
 
 .fa-instagram:hover {
-    opacity: 1;
-    color: #16a8f6a9;
+    filter: brightness(50%);
 
 }
 
@@ -422,7 +482,7 @@ footer {
         font-size: 32px;
         color: #fff;
         opacity: 0.7;
-        
+
     }
 
     .fa-align-justify:active {
@@ -543,7 +603,14 @@ footer {
 
     .foto {
         max-width: 15em;
-         
+
+    }
+
+    .destaque span {
+        color: whitesmoke;
+        font-size: 0.7em;
+        letter-spacing: 5px;
+
     }
 
 }
