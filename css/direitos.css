@@ -5,7 +5,7 @@
 }
 
 body {
-    
+
     font-family: "Colfax", sans-serif;
     font-weight: 400;
     width: 100%;
@@ -17,11 +17,11 @@ body {
 .barra-cabecalho {
     width: 100%;
     height: 60px;
-    background-color: transparent;
     display: flex;
     justify-content: left;
     align-items: center;
     overflow: hidden;
+    background-color: #0c0c0c;
 
 }
 
@@ -29,7 +29,6 @@ body {
 .barra-cabecalho li {
     margin-left: 40px;
     list-style: none;
-    opacity: 0.7;
     letter-spacing: 1px;
     font-size: 11pt;
     font-weight: normal;
@@ -42,41 +41,77 @@ body {
 }
 
 .barra-cabecalho li:hover {
-    background-color:#16a7f6;
+    background-color: #16a7f6;
     display: block;
+
 
 }
 
-a {
+.barra-cabecalho a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    
+
 }
 
 .container {
-    margin-top: 7em;
+    height: 100%;
     width: 100%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171a21;
 }
 
-.copyright {
+.permitido {
     font-size: 13pt;
     letter-spacing: 1px;
-    line-height: 1.55em;
-    padding: 20px;
-    text-align: center;
-    
+    line-height: 2em;
+    margin-top: 1.50em;
+    padding: 50px;
+}
 
+.npermitido {
+    margin-top: 40px;
+}
+
+.lembrete {
+    margin-top: 50px;
+}
+
+.lembrete a {
+    color: rgb(0, 255, 106);
+    text-transform: uppercase;
+}
+
+.lembrete a:hover {
+    opacity: 0.7;
+}
+
+.fa-brain {
+    margin-right: 10px;
+    color: rgb(169, 76, 245);
+}
+
+.fa-times-circle {
+    color: rgb(124, 16, 16);
+    margin-right: 10px;
+}
+
+
+.fa-check-double {
+    color: #16a7f6;
+    margin-right: 10px;
 }
 
 .rodape {
     background-color: #0c0c0c;
     text-align: center;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 50px;
     padding: 10px;
+
 }
 
 .fa-heart {

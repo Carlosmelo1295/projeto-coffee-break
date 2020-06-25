@@ -253,6 +253,23 @@ a {
 
 }
 
+.visitas {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    padding: 4px;
+    background-color: rgba(245, 245, 245, 0.589);
+    border-radius: 5px;
+
+}
+
+.visitas a {
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
 /*frame para animar a frase (Fotos em destaque*/
 @keyframes luzes {
     0% {
@@ -579,6 +596,7 @@ footer {
     .container-galeria {
         margin-bottom: 200px;
     }
+
 }
 
 /*------------------------DONE-----------------------------*/
@@ -611,6 +629,18 @@ footer {
         font-size: 0.7em;
         letter-spacing: 5px;
 
+    }
+
+    .visitas {
+        padding: 1px;
+        right: 0;
+
+    }
+
+    .visitas a {
+        color: black;
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 
 }
