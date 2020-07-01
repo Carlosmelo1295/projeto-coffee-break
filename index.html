@@ -8,9 +8,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logos/mug_coffee.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
+
+    <script>
+        /*exibir mensagem e carregando*/
+        window.onload = function () {
+            document.getElementById('conteudo').style.display = "block";
+            setTimeout(function () {
+                document.getElementById('carregando').style.display = "none";
+            }, 3000);
+        }
+
+        //mostrar e ocultar menu mobile
+        function mudar() {
+            let display = document.querySelector(".sub").style.display;
+            if (display == "none")
+                document.querySelector(".sub").style.display = 'block';
+            else
+                document.querySelector(".sub").style.display = 'none';
+        }
+
+        function mudar2() {
+            let display = document.querySelector(".subGaleria").style.display;
+            if (display == "none")
+                document.querySelector(".subGaleria").style.display = 'block';
+
+            else
+                document.querySelector(".subGaleria").style.display = 'none';
+        }
+    </script>
+
+
 </head>
 
-<body>
+<body id="conteudo">
+    <div id="carregando">
+        <span>Carregando</span>
+        <i class="fas fa-circle-notch"></i>
+    </div>
+
     <header>
         <div id="top" class="container-cabecalho">
             <a href="index.html"> <img src="logos/mug_coffee.png" alt="logo"></a>
@@ -123,25 +158,7 @@
         </div>
     </footer>
 
-    <script>
-        //mostrar e ocultar menu mobile
-        function mudar() {
-            let display = document.querySelector(".sub").style.display;
-            if (display == "none")
-                document.querySelector(".sub").style.display = 'block';
-            else
-                document.querySelector(".sub").style.display = 'none';
-        }
 
-        function mudar2() {
-            let display = document.querySelector(".subGaleria").style.display;
-            if (display == "none")
-                document.querySelector(".subGaleria").style.display = 'block';
-
-            else
-                document.querySelector(".subGaleria").style.display = 'none';
-        }
-    </script>
 </body>
 
 </html>
