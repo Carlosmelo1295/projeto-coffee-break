@@ -11,38 +11,36 @@ body {
     font-weight: 400;
     width: 100%;
     height: 100%;
-   background-image: url(../sobre-fotos/fundo.jpg); 
-   background-size: 100%;
-  
-   
+    background-image: url(../sobre-fotos/fundo.jpg);
+    background-size: 100%;
     color: #ffffff;
-    
+
 }
 
 .barratopo {
     width: 100%;
-    height: 50px;
+    height: auto;
     display: flex;
     position: fixed;
-    background-color:transparent;
+    background-color: #0c0c0c;
 }
 
 /*ul*/
 .menu {
+    width: 100%;
+    height: 60px;
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 100%;
+}
+
+a {
+    color: #ffffff;
+}
+
+.menu li {
     margin-left: 40px;
-
-}
-a{
-    color:#ffffff;
-}
-
-.menu li{
     list-style: none;
-    opacity: 0.7;
     letter-spacing: 1px;
     font-size: 11pt;
     font-weight: normal;
@@ -55,11 +53,10 @@ a{
 .menu li:hover {
     opacity: 1;
     background-color: #16a7f6;
-    overflow: hidden;
 
 }
 
-.fa-home{
+.fa-home {
     margin-right: 5px;
 }
 
@@ -68,7 +65,7 @@ a{
     width: 100%;
     height: 100%;
     justify-content: center;
-    background-color:  rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.37);
 
 }
 
@@ -87,7 +84,7 @@ a{
 }
 
 .box-sobre-autor {
-    background-color:#06090c;
+    background-color: #06090c;
     width: 150vh;
     height: auto;
     margin-bottom: 50px;
@@ -165,7 +162,7 @@ a{
 
 /*ícones*/
 
-.fa-heart{
+.fa-heart {
     color: red;
     font-size: 1.40em;
 }
@@ -188,6 +185,6 @@ a{
     }
 }
 
-.fa-dog{
+.fa-dog {
     color: sandybrown;
 }

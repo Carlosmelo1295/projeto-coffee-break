@@ -8,121 +8,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logos/mug_coffee.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
-    <script data-ad-client="ca-pub-8513941550517443" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-
 </head>
 
 <body>
     <header>
         <div id="top" class="container-cabecalho">
             <a href="index.html"> <img src="logos/mug_coffee.png" alt="logo"></a>
-
             <ul class="menu">
-
                 <li class="linhas-menu"><a href="#galeria">Galeria</a>
                     <ul>
                         <li><a href="#">Paisagens</a></li>
+                        <li><a href="#">Animais</a></li>
+                        <li><a href="#">Objetos</a></li>
                         <li><a href="#">Fantasia</a></li>
-                        <li><a href="#">Design</a></li>
                     </ul>
                 </li>
                 <div class="barravertical"></div>
-                <li class="linhas-menu"><a href="#">Agradecimentos</a></li>
+                <li class="linhas-menu"><a href="agradecimentos.html">Agradecimentos</a></li>
                 <div class="barravertical"></div>
                 <li class="linhas-menu"><a href="sobre.html">Sobre</a></li>
-
             </ul>
-
 
             <ul class="menu-mobile">
                 <li><i class="fas fa-align-justify" onclick="mudar()"></i></li>
                 <ul class="sub">
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Copyright</a></li>
-                    <li><a href="#">Design</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="agradecimentos.html">agradecimentos</a></li>
+                    <li onclick="mudar2()">galeria<i class="fas fa-angle-down"></i>
+                        <ul class="subGaleria">
+                            <li><a href="#">Paisagens</a></li>
+                            <li><a href="#">Animais</a></li>
+                            <li><a href="#">Objetos</a></li>
+                            <li><a href="#">Fantasia</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </ul>
         </div>
-        <section>
-            <div class="subcabecalho">
-                <div class="subtitle">
-                    <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">!</span></h1>
-                </div>
+        <div class="subcabecalho">
+            <div class="conteudo-subcabecalho">
+                <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">!</span></h1>
+                <h4>Imagens espetaculares criadas de artistas para artistas.</h4>
             </div>
-        </section>
+            <div class="autor">
+                <span>Foto por <a href="https://unsplash.com/@scheier" target="_blank">@scheier</a></span>
+            </div>
+        </div>
     </header>
-
     <div class="destaque">
         <span>Fotos em destaque</span>
     </div>
-
     <!--Começo da galeria de imagens-->
+    <div id="galeria" class="container-galeria">
+        <ul class="galeria">
+            <li><a href="background/alien-cat.jpg" target="_blank"><img class="foto" src="background/alien-cat.jpg"
+                        alt="Gato sendo abduzido" /></a>
+                <p>Abdução.</p>
+                <div class="autor-foto">
+                    <span>Foto por ...</span>
+                </div>
+            </li>
 
-    <section>
-        <div id="galeria" class="container-galeria">
+            <li><a href="background/olharAtento.jpg" target="_blank"><img class="foto" src="background/olharAtento.jpg"
+                        alt="Mulher observando uma fogueira" /></a>
+                <p>Olhar atento.</p>
+                <div class="autor-foto">
+                    <span>Foto por <a href=""></span>
+                </div>
+            </li>
 
-            <ul class="galeria">
+            <li><a href="background/1080.jpg" target="_blank"><img class="foto" src="background/1080.jpg"
+                        alt="Navegando no espaço" /></a>
+                <p>A felicidade pode ser encontrada mesmo nas horas mais difíceis, se você lembrar de acender a luz.</p>
+                <div class="autor-foto">
+                    <span>Foto por ...</span>
+                </div>
+            </li>
 
-                <li><a href="background/slien-cat.jpg" target="_blank"><img class="foto" src="background/slien-cat.jpg"
-                            alt="Gato sendo abduzido" /></a>
-                    <p>Abdução.</p>
-                </li>
+            <li><a href="background/spacecar.jpg" target="_blank"><img class="foto" src="background/spacecar.jpg"
+                        alt="Carro no espaço" /></a>
+                <p>Carro espacial.</p>
+                <div class="autor-foto">
+                    <span>Foto por ...</span>
+                </div>
+            </li>
 
-                <li><a href="background/florest2.jpg" target="_blank"><img class="foto" src="background/florest2.jpg"
-                            alt="Mulher observando uma fogueira" /></a>
-                    <p>Olhar atento.</p>
-                </li>
+            <li><a href="background/SpaceMan.jpg" target="_blank"><img class="foto" src="background/SpaceMan.jpg"
+                        alt="Astronauta na lua" /></a>
+                <p>Um pequeno passo para o homem mas um grande passo para a humanidade.</p>
+                <div class="autor-foto">
+                    <span>Foto por ...</span>
+                </div>
+            </li>
 
-                <li><a href="background/lost-in-the-space-com-camera-raw---Copia.jpg" target="_blank"><img class="foto"
-                            src="background/lost-in-the-space-com-camera-raw---Copia.jpg"
-                            alt="Homen sentado em um foguete" /></a>
-                    <p>Para o Alto e Avante!</p>
-                </li>
-
-                <li><a href="background/medieval.jpg" target="_blank"><img class="foto" src="background/medieval.jpg"
-                            alt="olhando pela janela" /></a>
-                    <p>Apreciando a vista da janela mais alta de Hogwarts</p>
-                </li>
-
-                <li><a href="background/magicselect.jpg" target="_blank"><img class="foto"
-                            src="background/magicselect.jpg" alt="image" /></a>
-                    <p>Crianças, a ficção é a verdade dentro da mentira, e a verdade desta ficção é bem simples: a magia
-                        existe.</p>
-                </li>
-
-                <li><a href="background/skate-mar-aberto.jpg" target="_blank"><img class="foto"
-                            src="background/skate-mar-aberto.jpg" alt="Andando de skate no mar" /></a>
-                    <p>Skate é criatividade.</p>
-                </li>
-
-                <li><a href="background/spacecar.jpg" target="_blank"><img class="foto" src="background/spacecar.jpg"
-                            alt="Carro no espaço" /></a>
-                    <p>Carro espacial.</p>
-                </li>
-
-                <li><a href="background/SpaceMan.jpg" target="_blank"><img class="foto" src="background/SpaceMan.jpg"
-                            alt="Astronauta na lua" /></a>
-                    <p>Um pequeno passo para o homem mas um grande passo para a humanidade.</p>
-                </li>
-
-            </ul>
-
-
-        </div>
-    </section>
+        </ul>
+    </div>
     <!--Fim galeria-->
-
-    <!--Rodapé-->
     <footer>
-
         <div id="contatos" class="conteudo-rodape">
-
-            <p id="report">Reporte bugs encontrados <a
-                    href="mailto:carlosmelo1295@gmail.com">carlosmelo1295@gmail.com</a></p>
-            <span>Agradecemos por sua visita!<br> Página em constante manutenção.</span>
+            <p id="report">Contato <a href="mailto:carlosmelo1295@gmail.com">carlosmelo1295@gmail.com</a></p>
+            <span>Agradecemos por sua visita!<br>Site em constante manutenção para o seu melhor proveito.</span>
             <br>
             <div class="redes">
                 <a href="https://github.com/Tklao/projeto-coffee-break" target="_blank"><i
@@ -133,11 +118,30 @@
                 <a href="direitos.html"><button class="botao">Direitos</button></a>
             </div>
             <span>Feito com <i class="fas fa-heart"></i> por Carlos Eduardo ©
-                2020</span>
+                2020. Todos os direitos reservados. </span>
             <br>
-
         </div>
     </footer>
+
+    <script>
+        //mostrar e ocultar menu mobile
+        function mudar() {
+            let display = document.querySelector(".sub").style.display;
+            if (display == "none")
+                document.querySelector(".sub").style.display = 'block';
+            else
+                document.querySelector(".sub").style.display = 'none';
+        }
+
+        function mudar2() {
+            let display = document.querySelector(".subGaleria").style.display;
+            if (display == "none")
+                document.querySelector(".subGaleria").style.display = 'block';
+
+            else
+                document.querySelector(".subGaleria").style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>

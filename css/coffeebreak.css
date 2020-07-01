@@ -5,39 +5,21 @@
     box-sizing: border-box;
 }
 
-/*Estilizar barra de rolagem*/
-::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.795);
-}
+a {
+    text-decoration: none;
 
-::-webkit-scrollbar {
-    width: 10px;
-    background: rgba(0, 0, 0, 0.795);
 }
-
-::-webkit-scrollbar-thumb {
-    background: #6c63ff;
-}
-
-/*-----------------------------------------------------*/
 
 html,
 body {
     font-size: 14pt;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-family: "Colfax", sans-serif;
     font-weight: 400;
     width: 100%;
     height: 100%;
     background-color: #171a21;
     scroll-behavior: smooth;
-
-
-
-}
-
-a {
-    text-decoration: none;
-
+    color: #ffffff;
 }
 
 /*barra que contem o logo e o menu */
@@ -48,23 +30,13 @@ a {
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
     position: fixed;
     width: 100%;
-
-
 }
 
 .container-cabecalho img {
-    margin-top: 5px;
-    margin-left: 40px;
-    width: 55px;
+    margin-left: 30px;
     height: auto;
-    opacity: 1;
-
+    cursor: pointer;
 }
-
-.container-cabecalho img:hover {
-    opacity: 0.8;
-}
-
 
 /*ul*/
 .menu {
@@ -75,8 +47,6 @@ a {
     width: 100%;
     margin-right: 1em;
     font-size: 10pt;
-
-
 }
 
 .barravertical {
@@ -98,12 +68,12 @@ a {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: normal;
-
 }
 
 .menu li a:hover {
     opacity: 1;
-    color: #16a7f6;
+    color: #0984e3;
+
 }
 
 /*Efeito botão de menu*/
@@ -114,12 +84,10 @@ a {
     top: 35px;
     width: 100%;
     height: 1px;
-    background-color: #16a7f6;
-    box-shadow: 0 0 10px #16a7f6;
+    background-color: #0984e3;
+    box-shadow: 0 0 10px #0984e3;
     animation: barra cubic-bezier(1, 1, 1, 1) 500ms;
-
 }
-
 
 /*Submenu*/
 .menu li ul {
@@ -131,15 +99,12 @@ a {
     font-size: 11pt;
     list-style: none;
     line-height: 2.5em;
-
 }
 
 /*Submenu*/
 .menu li:hover ul {
     display: block;
-
 }
-
 
 @keyframes barra {
     0% {
@@ -153,18 +118,18 @@ a {
     100% {
         width: 100px;
     }
-
 }
 
-/*subcabeçalho*/
 .subcabecalho {
-    height: 28em;
-    background-image: url(https://images.pexels.com/photos/2874066/pexels-photo-2874066.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    height: 80vh;
+    background-image: url(../background/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
-    display: flex;
+    background-position: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -176,23 +141,27 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.493);
-
+    background-color: rgba(0, 0, 0, 0.336);
 }
 
-/* class para selecionar o h1 dentro do subcabeçalho*/
-.subtitle h1 {
+.conteudo-subcabecalho {
     color: #fff;
-    letter-spacing: 10px;
-    font-size: 34px;
-    text-shadow: 5px 5px 5px #1d1e1f;
-    font-weight: 400;
-    margin-top: 7em;
-    margin-left: 1em;
-    text-transform: uppercase;
     text-align: center;
-    font-family: "Colfax", sans-serif;
+    font-weight: 400;
     position: absolute;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.subcabecalho h1 {
+    text-shadow: 5px 5px 5px #1d1e1f;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.subcabecalho h4 {
+    letter-spacing: 2px;
+    color: rgb(139, 139, 139);
 
 }
 
@@ -214,13 +183,11 @@ a {
     }
 }
 
-
 /*div que envolve a galeria*/
 .container-galeria {
     width: 100%;
     margin-bottom: 200px;
     background-color: #171a21;
-
 }
 
 /*class para manipular ul*/
@@ -230,8 +197,6 @@ a {
     overflow: hidden;
     flex-wrap: wrap;
     list-style: none;
-
-
 }
 
 /*frase (fotos em destaque)*/
@@ -243,61 +208,33 @@ a {
     width: 100%;
     background-color: #0e1014;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 .destaque span {
-    color: whitesmoke;
-    font-size: 1em;
+    font-size: 15px;
     letter-spacing: 5px;
-    animation: luzes 4s cubic-bezier(1, 1, 1, 1) infinite;
-
+    color: #ffffff;
 }
 
-.visitas {
-    display: flex;
-    align-items: center;
+/*autor foto da capa */
+.autor {
     position: absolute;
-    right: 10px;
-    padding: 4px;
-    background-color: rgba(245, 245, 245, 0.589);
-    border-radius: 5px;
+    bottom: 10px;
+    right: 100px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.404);
+}
+
+.autor a {
+    color: rgba(255, 255, 255, 0.404);
+}
+
+.autor a:hover {
+    color: white;
 
 }
 
-.visitas a {
-    color: rgb(0, 0, 0);
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-/*frame para animar a frase (Fotos em destaque*/
-@keyframes luzes {
-    0% {
-        color: rgba(55, 137, 214, 0.76);
-    }
-
-    30% {
-        color: #6c63ff;
-
-    }
-
-    60% {
-        color: midnightblue;
-    }
-
-    80% {
-        color: chocolate;
-
-    }
-
-    90% {
-        color: #f61616;
-    }
-
-    100% {
-        color: rgba(55, 137, 214, 0.952);
-    }
-}
 
 .galeria li {
     position: relative;
@@ -318,12 +255,10 @@ a {
     opacity: 0;
     transition: 500ms cubic-bezier(1, 1, 1, 1);
     line-height: 25px;
-
 }
 
 .galeria li:hover p {
     opacity: 1;
-
 }
 
 /*class para manipular foto*/
@@ -334,26 +269,30 @@ a {
     margin-top: 0.8em;
     border-radius: 3px;
 
-
 }
 
 .foto:hover {
     filter: brightness(50%);
-
 }
 
+/*class onde terá o nome do autor da foto com o link de redirecionamento */
+.autor-foto{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgb(161, 161, 161);
+}
 
-/*-------------------------------------*/
 footer {
     width: 100%;
-    font-size: 12pt;
     background-color: #0e1014;
     display: flex;
     justify-content: center;
     position: fixed;
     bottom: 0;
     z-index: -100;
-
 }
 
 .conteudo-rodape {
@@ -365,13 +304,13 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 13px;
-
 }
 
 #report a {
-    color: #16a7f6;
+    color: #0984e3;
     opacity: 0.6;
-    border: 1px solid #16a7f6;
+    font-size: 12px;
+    border: 1px solid#0984e3;
     padding: 3px;
     border-radius: 20px;
 }
@@ -380,10 +319,8 @@ footer {
     opacity: 1;
 }
 
-/*ícone de coração*/
 .fa-heart {
     color: red;
-    animation: piscarcoracao 1s linear infinite;
     font-size: 20px;
 }
 
@@ -418,24 +355,19 @@ footer {
 
 .botao:hover {
     filter: brightness(50%);
-
 }
 
-/*logo git*/
 .fa-github-square {
     color: whitesmoke;
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 50px;
-
 }
 
 .fa-github-square:hover {
     filter: brightness(50%);
-
 }
 
-/*logo instagram*/
 .fa-instagram {
     color: whitesmoke;
     border: 1px solid #fff;
@@ -446,22 +378,8 @@ footer {
 
 .fa-instagram:hover {
     filter: brightness(50%);
-
 }
 
-@keyframes piscarcoracao {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
 
 @media (min-width: 1024px) {
     .menu-mobile {
@@ -469,26 +387,19 @@ footer {
     }
 }
 
-/*--------------------DONE-------------------------------*/
 @media (max-width: 1024px) {
 
     .menu {
         display: none;
     }
 
-    .foto {
-
-        margin-top: 40px;
+    .subcabecalho h1 {
+        font-size: 35px;
+        line-height: 65px;
     }
 
-    .subtitle h1 {
-        font-size: 1.5em;
-        line-height: 60px;
-        margin-right: 1em;
-        margin-top: 7em;
-        color: rgb(255, 255, 255);
-        border-radius: 5px;
-        padding: 2px;
+    .subcabecalho h4 {
+        font-size: 20px;
     }
 
     .container-galeria {
@@ -496,35 +407,31 @@ footer {
     }
 
     .fa-align-justify {
-        font-size: 32px;
-        color: #fff;
-        opacity: 0.7;
-
-    }
-
-    .fa-align-justify:active {
-        color: #16a7f6;
-
+        font-size: 30px;
+        color: whitesmoke;
+        padding: 15px;
+        margin-right: 10px;
+        position: relative;
     }
 
     .fa-align-justify:hover {
-        opacity: 1;
+        filter: brightness(70%);
     }
 
     /*ul principal*/
     .menu-mobile {
         position: relative;
         width: 100%;
+        cursor: pointer;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+
     }
 
     .menu-mobile li {
         list-style: none;
         letter-spacing: 1px;
         line-height: 35px;
-        margin-right: 10px;
 
     }
 
@@ -532,14 +439,39 @@ footer {
     .menu-mobile ul {
         position: absolute;
         right: 0;
-        width: 150px;
+        width: 250px;
         background-color: #171a21;
-        top: 65px;
-        display: none;
+        top: 60px;
         text-align: center;
         text-transform: uppercase;
         font-size: 15px;
         animation: entrada 500ms cubic-bezier(1, 1, 1, 1);
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    /*selecionar UL dentro da LI (galeria) menu-mobile*/
+    .menu-mobile ul li ul {
+        position: relative;
+        top: 0;
+        display: none;
+    }
+
+    /*pseudo class para selecionar o ultimo LI dentro do UL(sub)*/
+    .sub>li:last-child {
+        color: #ffffff;
+        background-color: #0984e3;
+    }
+
+    .fa-angle-down {
+        color: white;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    /*sombra menu mobile*/
+    .menu-mobile ul li:hover {
+        background-color: #0984e3;
     }
 
     @keyframes entrada {
@@ -549,63 +481,50 @@ footer {
 
         }
 
-        100% {
-            width: 100px;
+        50% {
+            width: 150px;
         }
 
+        100% {
+            width: 250px;
+
+        }
     }
 
     .menu-mobile a {
-        text-decoration: none;
         color: #fff;
-
-    }
-
-    .menu-mobile ul li::after {
-        content: '';
-        display: block;
-        background-color: rgba(245, 245, 245, 0.288);
-        width: 100%;
-        height: 1px;
-        margin-top: 5px;
-    }
-
-    .menu-mobile a:hover {
-        color: #16a7f6;
     }
 }
 
-/*---------------------DONE-------------------------------*/
 @media (max-width: 800px) {
 
-    .subcabecalho {
-        height: 390px;
+    .subcabecalho h1 {
+        font-size: 20px;
+
     }
 
-    .subtitle h1 {
-        font-size: 1.4em;
-        margin-top: 6.5em;
+    .subcabecalho h4 {
+        font-size: 15px;
     }
 
     .conteudo-rodape {
         margin-top: 2.8em;
         position: relative;
-
     }
 
     .container-galeria {
         margin-bottom: 200px;
     }
-
 }
 
-/*------------------------DONE-----------------------------*/
 @media (max-width: 600px) {
+    .subcabecalho h1 {
+        font-size: 18px;
+        line-height: 32px;
+    }
 
-    .subtitle h1 {
-        font-size: 20px;
-        margin-top: 7em;
-        line-height: 40px;
+    .subcabecalho h4 {
+        font-size: 14px;
     }
 
     .cabecalho {
@@ -614,27 +533,19 @@ footer {
         align-items: center;
     }
 
-
-    .subcabecalho {
-        height: 300px;
-    }
-
     .foto {
         max-width: 15em;
-
     }
 
     .destaque span {
         color: whitesmoke;
         font-size: 0.7em;
         letter-spacing: 5px;
-
     }
 
     .visitas {
         padding: 1px;
         right: 0;
-
     }
 
     .visitas a {
@@ -642,18 +553,17 @@ footer {
         font-size: 10px;
         letter-spacing: 2px;
     }
-
 }
 
-/*----------------DONE---------------------------*/
 @media (max-width: 480px) {
-    .subcabecalho {
-        height: 250px;
+
+    .subcabecalho h1 {
+        font-size: 15px;
+        line-height: 26px;
     }
 
-    .subtitle h1 {
-        font-size: 15px;
-        margin-top: 8em;
+    .subcabecalho h4 {
+        font-size: 12px;
     }
 
     .barravertical {
@@ -689,16 +599,15 @@ footer {
 
 }
 
-/*-----------------------------------------------------------*/
 @media (max-width: 320px) {
-    .subtitle h1 {
-        font-size: 10px;
-        margin-top: 15em;
-        line-height: 20px;
+    .subcabecalho h1 {
+        font-size: 12px;
+        line-height: 25px;
     }
 
-    .subcabecalho {
-        height: 300px;
+    .subcabecalho h4 {
+        font-size: 10px;
+        line-height: 15px;
     }
 
     .conteudo-rodape {
@@ -713,6 +622,6 @@ footer {
     }
 
     .container-galeria {
-        margin-bottom: 180px;
+        margin-bottom: 220px;
     }
 }

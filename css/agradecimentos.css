@@ -20,9 +20,10 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    overflow: hidden;
     background-color: #0c0c0c;
+
 }
+
 
 .barra-cabecalho li {
     margin-left: 40px;
@@ -40,6 +41,8 @@ body {
 .barra-cabecalho li:hover {
     background-color: #16a7f6;
     display: block;
+
+
 }
 
 .barra-cabecalho a {
@@ -54,49 +57,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #171a21;
+    flex-direction: column;
     padding: 50px;
     margin-bottom: 50px;
-}
-
-.permitido {
-    font-size: 13pt;
     letter-spacing: 1px;
-    line-height: 2em;
-    margin-top: 1.50em;
 
 }
 
-.npermitido {
-    margin-top: 40px;
-}
-
-.lembrete {
+.lista {
     margin-top: 50px;
-}
-
-.lembrete a {
-    color: rgb(0, 255, 106);
+    line-height: 1.60em;
     text-transform: uppercase;
+
 }
 
-.lembrete a:hover {
-    opacity: 0.7;
-}
-
-.fa-brain {
-    margin-right: 10px;
-    color: rgb(169, 76, 245);
-}
-
-.fa-times-circle {
-    color: rgb(124, 16, 16);
-    margin-right: 10px;
-}
-
-.fa-check-double {
-    color: #16a7f6;
-    margin-right: 10px;
+.lista a {
+    color: lightgreen;
 }
 
 .rodape {
