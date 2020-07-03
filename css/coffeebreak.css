@@ -343,8 +343,8 @@ footer {
 }
 
 .fa-heart {
-    color: red;
-    font-size: 20px;
+    color: rgba(255, 0, 0, 0.685);
+    font-size: 1.20em;
 }
 
 /*div que envolve os logos do rodapé*/
@@ -471,10 +471,11 @@ footer {
         animation: entrada 500ms cubic-bezier(1, 1, 1, 1);
         padding: 2px;
         cursor: pointer;
+        display: none;
     }
 
     /*selecionar UL dentro da LI (galeria) menu-mobile*/
-    .menu-mobile ul li ul {
+    .sub ul {
         position: relative;
         top: 0;
         display: none;
