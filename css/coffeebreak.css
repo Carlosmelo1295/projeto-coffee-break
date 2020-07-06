@@ -27,23 +27,11 @@ body {
     position: fixed;
     z-index: 22222;
     bottom: 0;
-    font-size: 40px;
-    text-transform: uppercase;
-    background-color:rgba(0, 0, 0, 0.322);
     top: 0;
     left: 0;
     right: 0;
     text-align: center;
-}
 
-.fa-circle-notch{
-    animation: gira linear 2s infinite;
-}
-
-@keyframes gira{
-    0%{
-        transform: rotate(360deg);
-    }
 }
 
 /*barra que contem o logo e o menu */
