@@ -1,2 +1,2 @@
 # coffee-break
- Projeto para por em prática minha aprendizagem com desenvolvimento web
+ Projeto de um website para publicação de fotos criadas por diversos artistas.
