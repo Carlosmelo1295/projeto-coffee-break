@@ -3,7 +3,7 @@
        document.getElementById('conteudo').style.display = "block";
        setTimeout(function () {
            document.getElementById('carregando').style.display = "none";
-       }, 2500);
+       }, 2000);
    }
    
 

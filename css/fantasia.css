@@ -1,0 +1,57 @@
+.subcabecalho-fantasia {
+    background-image: url(../background/alone_in_the_dark_25_by_null_entity_de07nhp3.jpg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: rgb(161, 161, 161);
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+.subcabecalho-fantasia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+.conteudo-subcabecalho-fantasia {
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.subcabecalho-fantasia h1 {
+    text-shadow: 5px 5px 5px #1d1e1f;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.subcabecalho-fantasia h4 {
+    letter-spacing: 2px;
+    color: rgb(139, 139, 139);
+
+}
+
+.container-galeria-fantasia {
+    width: 100%;
+    margin-bottom: 280px;
+    background-color: #0f0f13;
+
+}
