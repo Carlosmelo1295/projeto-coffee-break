@@ -5,6 +5,7 @@
            document.getElementById('carregando').style.display = "none";
        }, 2500);
    }
+   
 
    //mostrar e ocultar menu mobile
    function mudar() {
@@ -23,3 +24,5 @@
        else
            document.querySelector(".subGaleria").style.display = 'none';
    }
+
+   

@@ -1,507 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.subcabecalho-animais {
+    background-image: url(../fotos-animais/20200704155239_IMG_0031.jpg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
-    text-decoration: none;
-
-}
-
-html,
-body {
-    font-size: 14pt;
-    font-family: "Colfax", sans-serif;
-    font-weight: 400;
-    width: 100%;
-    height: 100%;
-    background-color: #171a21;
-    scroll-behavior: smooth;
-    color: #ffffff;
-
-}
-
-#carregando {
-    position: fixed;
-    z-index: 22222;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-
-}
-
-/*barra que contem o logo e o menu */
-.container-cabecalho {
-    background: #0e1014;
-    display: flex;
-    z-index: 20000;
-    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.container-cabecalho img {
-    margin-left: 30px;
-    height: auto;
-    cursor: pointer;
-}
-
-/*ul*/
-.menu {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    margin-right: 1em;
-    font-size: 10pt;
-}
-
-.barravertical {
-    width: 2px;
-    height: 20px;
-    background-color: rgba(255, 255, 255, 0.11);
-}
-
-.menu li {
-    position: relative;
-
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 20px;
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: normal;
-}
-
-.menu li a:hover {
-    opacity: 1;
-    color: #0984e3;
-
-}
-
-/*Efeito botão de menu*/
-.menu .linhas-menu:hover::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 35px;
-    width: 100%;
-    height: 1px;
-    background-color: #0984e3;
-    box-shadow: 0 0 10px #0984e3;
-    animation: barra cubic-bezier(1, 1, 1, 1) 500ms;
-}
-
-/*Submenu*/
-.menu li ul {
-    margin-top: 22px;
-    position: absolute;
-    background-color: #171a21;
-    display: none;
-    text-align: center;
-    font-size: 11pt;
-    list-style: none;
-    line-height: 2.5em;
-}
-
-/*Submenu*/
-.menu li:hover ul {
-    display: block;
-}
-
-@keyframes barra {
-    0% {
-        width: 10px;
-    }
-
-    50% {
-        width: 50px;
-    }
-
-    100% {
-        width: 100px;
-    }
-}
-
-/*div que envolve a galeria*/
-.container-galeria {
-    width: 100%;
-    margin-bottom: 200px;
-    background-color: #171a21;
-    margin-top: 100px;
-    
-}
-
-/*class para manipular ul*/
-.galeria {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    flex-wrap: wrap;
-    list-style: none;
-
-}
-
-/*autor foto da capa */
-.autor {
-    position: absolute;
-    bottom: 10px;
-    right: 100px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.404);
-}
-
-.autor a {
-    color: rgba(255, 255, 255, 0.404);
-}
-
-.autor a:hover {
-    color: white;
-
-}
-
-.galeria li {
-    position: relative;
-    margin: 15px;
-}
-
-/*class para manipular a legenda da foto*/
-.galeria li p {
-    color: #ffffff;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    position: absolute;
-    top: 100px;
-    z-index: 2;
-    left: 50px;
-    right: 50px;
-    opacity: 0;
-    transition: 500ms cubic-bezier(1, 1, 1, 1);
-    line-height: 25px;
-}
-
-.galeria li:hover p {
-    opacity: 1;
-}
-
-/*class para manipular foto*/
-.foto {
-    max-width: 20em;
-    transition: 500ms;
-    border-radius: 3px;
-
-}
-
-.foto:hover {
-    filter: brightness(50%);
-}
-
-/*class onde terá o nome do autor da foto com o link de redirecionamento */
-.autor-foto {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 12px;
-    letter-spacing: 1px;
     color: rgb(161, 161, 161);
 }
 
-footer {
-    width: 100%;
-    background-color: #0e1014;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    z-index: -100;
+a:hover{
+    color: whitesmoke;
 }
 
-.conteudo-rodape {
-    text-align: center;
-    color: #fff;
-    line-height: 2.3em;
-    width: 100%;
-    margin-top: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 13px;
-}
-
-#report a {
-    color: #0984e3;
-    opacity: 0.6;
-    font-size: 12px;
-    border: 1px solid#0984e3;
-    padding: 3px;
-    border-radius: 20px;
-}
-
-#report a:hover {
-    opacity: 1;
-}
-
-.fa-heart {
-    color: rgba(255, 0, 0, 0.685);
-    font-size: 1.20em;
-}
-
-/*div que envolve os logos do rodapé*/
-.redes {
-    font-size: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 6px;
-
-}
-
-.redes::after {
+.subcabecalho-animais::before {
     content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(245, 245, 245, 0.568);
-}
-
-.botao {
     position: absolute;
-    left: 200px;
-    border: none;
-    padding: 6px;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.336);
 }
 
-.botao:hover {
-    filter: brightness(50%);
-}
-
-.fa-github-square {
+.conteudo-subcabecalho-animais {
     color: whitesmoke;
-    border: 1px solid #fff;
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    border-radius: 10px;
     padding: 10px;
-    border-radius: 50px;
 }
 
-.fa-github-square:hover {
-    filter: brightness(50%);
+.subcabecalho-animais h1 {
+    text-shadow: 5px 5px 5px #1d1e1f;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
-.fa-instagram {
-    color: whitesmoke;
-    border: 1px solid #fff;
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: 20px;
-}
-
-.fa-instagram:hover {
-    filter: brightness(50%);
-}
-
-
-@media (min-width: 1024px) {
-    .menu-mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 1024px) {
-
-    .menu {
-        display: none;
-    }
-
-    .container-galeria {
-        margin-bottom: 250px;
-    }
-
-    .fa-align-justify {
-        font-size: 30px;
-        color: whitesmoke;
-        padding: 15px;
-        margin-right: 10px;
-        position: relative;
-    }
-
-    .fa-align-justify:hover {
-        filter: brightness(70%);
-    }
-
-    /*ul principal*/
-    .menu-mobile {
-        position: relative;
-        width: 100%;
-        cursor: pointer;
-        display: flex;
-        justify-content: flex-end;
-
-    }
-
-    .menu-mobile li {
-        list-style: none;
-        letter-spacing: 1px;
-        line-height: 35px;
-
-    }
-
-    /*ul sub menu*/
-    .menu-mobile ul {
-        position: absolute;
-        right: 0;
-        width: 250px;
-        background-color: #171a21;
-        top: 60px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 15px;
-        animation: entrada 500ms cubic-bezier(1, 1, 1, 1);
-        padding: 2px;
-        cursor: pointer;
-        display: none;
-    }
-
-    /*selecionar UL dentro da LI (galeria) menu-mobile*/
-    .sub ul {
-        position: relative;
-        top: 0;
-        display: none;
-    }
-
-    /*pseudo class para selecionar o ultimo LI dentro do UL(sub)*/
-    .sub>li:last-child {
-        color: #ffffff;
-        background-color: #0984e3;
-    }
-
-    .fa-angle-down {
-        color: white;
-        font-size: 20px;
-        margin-left: 5px;
-    }
-
-    /*sombra menu mobile*/
-    .menu-mobile ul li:hover {
-        background-color: #0984e3;
-    }
-
-    @keyframes entrada {
-
-        0% {
-            width: 0%;
-
-        }
-
-        50% {
-            width: 150px;
-        }
-
-        100% {
-            width: 250px;
-
-        }
-    }
-
-    .menu-mobile a {
-        color: #fff;
-    }
-}
-
-@media (max-width: 800px) {
-    .conteudo-rodape {
-        margin-top: 2.8em;
-        position: relative;
-    }
-
-    .container-galeria {
-        margin-bottom: 200px;
-    }
-}
-
-@media (max-width: 600px) {
-    .cabecalho {
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .foto {
-        max-width: 15em;
-    }
-
-    .destaque span {
-        color: whitesmoke;
-        font-size: 0.7em;
-        letter-spacing: 5px;
-    }
-
-    .visitas {
-        padding: 1px;
-        right: 0;
-    }
-
-    .visitas a {
-        color: black;
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-galeria {
-        margin-bottom: 300px;
-    }
-
-    .conteudo-rodape {
-        line-height: 2.8em;
-
-    }
-
-    .redes {
-        font-size: 20px;
-    }
-
-    .fa-github-square {
-        padding: 5px;
-    }
-
-    .fa-instagram {
-        padding: 5px;
-        margin-left: 8px;
-    }
-
-    .botao {
-        padding: 3px;
-    }
+.subcabecalho-animais h4 {
+    letter-spacing: 2px;
+    color: rgb(139, 139, 139);
 
 }
 
-@media (max-width: 320px) {
-    .conteudo-rodape {
-        font-size: 9px;
-        margin: 0 10px;
-        margin-top: 10px;
-    }
+.container-galeria-animais {
+    width: 100%;
+    margin-bottom: 200px;
+    background-color: #0f0f13;
 
-    .barravertical {
-        height: 9px;
-        margin-top: 5px;
-    }
-
-    .container-galeria {
-        margin-bottom: 220px;
-    }
 }

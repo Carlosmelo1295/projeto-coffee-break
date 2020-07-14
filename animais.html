@@ -4,17 +4,18 @@
 <head>
     <title>CoffeeBreak</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/animais.css" type="text/css">
+    <link rel="stylesheet" href="css/coffeebreak.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logos/mug_coffee.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="css/animais.css" type="text/css">
+
 </head>
 
 <body id="conteudo">
     <div id="carregando">
-        <img src="https://media0.giphy.com/media/9Pv8ghQOFXA6lyVUqO/giphy.gif">
-
+        <i class="fas fa-sync"></i>
     </div>
 
     <header>
@@ -23,8 +24,8 @@
             <ul class="menu">
                 <li class="linhas-menu"><a href="#galeria">Galeria</a>
                     <ul>
-                        <li><a href="#">Paisagens</a></li>
-                        <li><a href="#">Animais</a></li>
+                        <li><a href="">Paisagens</a></li>
+                        <li><a href="animais.html">Animais</a></li>
                         <li><a href="#">Objetos</a></li>
                         <li><a href="#">Fantasia</a></li>
                     </ul>
@@ -43,7 +44,7 @@
                     <li onclick="mudar2()">galeria<i class="fas fa-angle-down"></i>
                         <ul class="subGaleria">
                             <li><a href="#">Paisagens</a></li>
-                            <li><a href="#">Animais</a></li>
+                            <li><a href="animais.html">Animais</a></li>
                             <li><a href="#">Objetos</a></li>
                             <li><a href="#">Fantasia</a></li>
                         </ul>
@@ -51,55 +52,24 @@
                 </ul>
             </ul>
         </div>
+        <div class="subcabecalho-animais">
+            <div class="conteudo-subcabecalho-animais">
+                <h1>Os melhores amigos<span class="barra">!</span></h1>
+                <h4>Imagens espetaculares criadas de artistas para artistas.</h4>
+            </div>
+            <div class="autor">
+                <span>Foto por <a href="https://www.instagram.com/andnvl/" target="_blank">@Andressa Novelo</a></span>
+            </div>
+        </div>
     </header>
     <!--Começo da galeria de imagens-->
-    <div id="galeria" class="container-galeria">
+    <div id="galeria" class="container-galeria-animais">
         <ul class="galeria">
-            <li><a href="background/alien-cat.jpg" target="_blank"><img class="foto" src="background/alien-cat.jpg"
-                        alt="Gato sendo abduzido" /></a>
-                <p>Abdução.</p>
+            <li><a href="fotos-animais/20200704155239_IMG_0031.jpg" target="_blank"><img class="foto"
+                        src="fotos-animais/20200704155239_IMG_0031.jpg" alt="Gato" /></a>
+                <p>Nico</p>
                 <div class="autor-foto">
-                    <span>Foto por: Carlos - Coffeebreak</span>
-                </div>
-            </li>
-
-            <li><a href="background/olharAtento.jpg" target="_blank"><img class="foto" src="background/olharAtento.jpg"
-                        alt="Mulher observando uma fogueira" /></a>
-                <p>Olhar atento.</p>
-                <div class="autor-foto">
-                    <span>Foto por: Carlos - Coffeebreak</span>
-                </div>
-            </li>
-
-            <li><a href="background/1080.jpg" target="_blank"><img class="foto" src="background/1080.jpg"
-                        alt="Navegando no espaço" /></a>
-                <p>A felicidade pode ser encontrada mesmo nas horas mais difíceis, se você lembrar de acender a luz.</p>
-                <div class="autor-foto">
-                    <span>Foto por: Carlos - Coffeebreak</span>
-                </div>
-            </li>
-
-            <li><a href="background/spacecar.jpg" target="_blank"><img class="foto" src="background/spacecar.jpg"
-                        alt="Carro no espaço" /></a>
-                <p>Carro espacial.</p>
-                <div class="autor-foto">
-                    <span>Foto por: Carlos - Coffeebreak</span>
-                </div>
-            </li>
-
-            <li><a href="background/SpaceMan.jpg" target="_blank"><img class="foto" src="background/SpaceMan.jpg"
-                        alt="Astronauta na lua" /></a>
-                <p>Um pequeno passo para o homem mas um grande passo para a humanidade.</p>
-                <div class="autor-foto">
-                    <span>Foto por: Carlos - Coffeebreak</span>
-                </div>
-            </li>
-
-            <li><a href="background/blur.jpg" target="_blank"><img class="foto" src="background/blur.jpg"
-                        alt="Fotógrafo" /></a>
-                <p>A fotografia é uma das poucas coisas que tem poder sobre o tempo: ela o paralisa.</p>
-                <div class="autor-foto">
-                    <span>Foto por ...</span>
+                    <span>Foto por: <a href="https://www.instagram.com/andnvl/" target="_blank"> Andressa</span></a>
                 </div>
             </li>
 
@@ -119,7 +89,7 @@
 
                 <a href="direitos.html"><button class="botao">Direitos</button></a>
             </div>
-            <span>Feito com <i class="fas fa-heart"></i> por Carlos Eduardo ©
+            <span>Criado por Carlos Eduardo ©
                 2020. Todos os direitos reservados. </span>
             <br>
         </div>

@@ -17,9 +17,18 @@ body {
     font-weight: 400;
     width: 100%;
     height: 100%;
-    background-color: #171a21;
     scroll-behavior: smooth;
     color: #ffffff;
+    background-color: #171a21;
+
+}
+
+:root {
+    /*background do cabeçalho e do rodapé*/
+    --div-background-color: #0c0c0c;
+
+    /*cores dos ícones do rodapé, do hover e pseudo elemento (linha que aparece quando passa o mouse)*/
+    --cbc-rdp: #0984e3;
 
 }
 
@@ -30,18 +39,41 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    text-align: center;
+    background: linear-gradient(to right, #0f3f867e, #c7a25d7a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
+.fa-sync {
+    font-size: 100px;
+    animation: carregando 2s linear reverse infinite;
+}
+
+@keyframes carregando {
+    0% {
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------*\
+  COMEÇO DA SEÇÃO CABEÇALHO(QUE CONTÉM LOGO E MENU) E DO SUBCABEÇALHO ( QUE CONTÉM CAPA E MENSAGEM DE BOAS VINDAS 
+\*--------------------------------------------------------------------------------------------------------------*/
+
 /*barra que contem o logo e o menu */
 .container-cabecalho {
-    background: #0e1014;
+    background: var(--div-background-color);
     display: flex;
     z-index: 20000;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
     position: fixed;
     width: 100%;
+    top: 0;
 }
 
 .container-cabecalho img {
@@ -84,7 +116,7 @@ body {
 
 .menu li a:hover {
     opacity: 1;
-    color: #0984e3;
+    color: var(--cbc-rdp);
 
 }
 
@@ -96,8 +128,8 @@ body {
     top: 35px;
     width: 100%;
     height: 1px;
-    background-color: #0984e3;
-    box-shadow: 0 0 10px #0984e3;
+    background-color: var(--cbc-rdp);
+    box-shadow: 0 0 10px var(--cbc-rdp);
     animation: barra cubic-bezier(1, 1, 1, 1) 500ms;
 }
 
@@ -105,7 +137,7 @@ body {
 .menu li ul {
     margin-top: 22px;
     position: absolute;
-    background-color: #171a21;
+    background-color: var(--div-background-color);
     display: none;
     text-align: center;
     font-size: 11pt;
@@ -177,6 +209,24 @@ body {
 
 }
 
+/*autor foto da capa */
+.autor {
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.404);
+}
+
+.autor a {
+    color: rgba(255, 255, 255, 0.404);
+}
+
+.autor a:hover {
+    color: white;
+
+}
+
 .barra {
     animation: piscarBarra 500ms linear infinite;
 }
@@ -195,23 +245,6 @@ body {
     }
 }
 
-/*div que envolve a galeria*/
-.container-galeria {
-    width: 100%;
-    margin-bottom: 200px;
-    background-color: #171a21;
-}
-
-/*class para manipular ul*/
-.galeria {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    flex-wrap: wrap;
-    list-style: none;
-
-}
-
 /*frase (fotos em destaque)*/
 .destaque {
     display: flex;
@@ -219,7 +252,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #0e1014;
+    background-color: var(--div-background-color);
     padding: 10px;
     text-transform: uppercase;
 }
@@ -230,22 +263,28 @@ body {
     color: #ffffff;
 }
 
-/*autor foto da capa */
-.autor {
-    position: absolute;
-    bottom: 10px;
-    right: 100px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.404);
+
+/*-----------*\
+  FIM DA SEÇÃO
+\*-----------*/
+
+
+/*----------------------------------------*\
+  COMEÇO DA GALERIA QUE CONTÉM AS IMAGENS 
+\*----------------------------------------*/
+.container-galeria {
+    width: 100%;
+    margin-bottom: 200px;
+    background-color: #0f0f13;
 }
 
-.autor a {
-    color: rgba(255, 255, 255, 0.404);
-}
-
-.autor a:hover {
-    color: white;
-
+/*class para manipular ul*/
+.galeria {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 .galeria li {
@@ -276,7 +315,7 @@ body {
 
 /*class para manipular foto*/
 .foto {
-    max-width: 20em;
+    max-width: 18em;
     transition: 500ms;
     border-radius: 3px;
 
@@ -286,53 +325,45 @@ body {
     filter: brightness(50%);
 }
 
-/*class onde terá o nome do autor da foto com o link de redirecionamento */
-.autor-foto {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: rgb(161, 161, 161);
-}
+/*-----------*\
+  FIM DA SEÇÃO
+\*-----------*/
 
+/*----------------*\
+  COMEÇO DO RODAPÉ
+\*----------------*/
 footer {
-    width: 100%;
-    background-color: #0e1014;
+    background-color: var(--div-background-color);
     display: flex;
     justify-content: center;
     position: fixed;
     bottom: 0;
     z-index: -100;
+    width: 100%;
 }
 
 .conteudo-rodape {
     text-align: center;
     color: #fff;
     line-height: 2.3em;
-    width: 100%;
     margin-top: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 13px;
+    width: 100%;
 }
 
 #report a {
-    color: #0984e3;
+    color: var(--cbc-rdp);
     opacity: 0.6;
     font-size: 12px;
-    border: 1px solid#0984e3;
+    border: 1px solid var(--cbc-rdp);
     padding: 3px;
     border-radius: 20px;
 }
 
 #report a:hover {
     opacity: 1;
-}
-
-.fa-heart {
-    color: rgba(255, 0, 0, 0.685);
-    font-size: 1.20em;
 }
 
 /*div que envolve os logos do rodapé*/
@@ -351,16 +382,16 @@ footer {
     display: block;
     width: 100%;
     height: 1px;
-    background-color: rgba(245, 245, 245, 0.568);
+    background-color: var(--cbc-rdp);
 }
 
 .botao {
     position: absolute;
-    left: 200px;
+    right: 10px;
     border: none;
     padding: 6px;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: var(--cbc-rdp);
     color: black;
 }
 
@@ -369,8 +400,8 @@ footer {
 }
 
 .fa-github-square {
-    color: whitesmoke;
-    border: 1px solid #fff;
+    color: var(--cbc-rdp);
+    border: 1px solid var(--cbc-rdp);
     padding: 10px;
     border-radius: 50px;
 }
@@ -380,8 +411,8 @@ footer {
 }
 
 .fa-instagram {
-    color: whitesmoke;
-    border: 1px solid #fff;
+    color: var(--cbc-rdp);
+    border: 1px solid var(--cbc-rdp);
     padding: 10px;
     border-radius: 50px;
     margin-left: 20px;
@@ -391,6 +422,13 @@ footer {
     filter: brightness(50%);
 }
 
+/*-----------*\
+  FIM DA SEÇÃO
+\*-----------*/
+
+/*----------------------------------------*\
+  DAQUI PARA BAIXO CONTÉM AS MEDIA QUERIES
+\*----------------------------------------*/
 
 @media (min-width: 1024px) {
     .menu-mobile {
@@ -451,7 +489,7 @@ footer {
         position: absolute;
         right: 0;
         width: 250px;
-        background-color: #171a21;
+        background-color: var(--div-background-color);
         top: 60px;
         text-align: center;
         text-transform: uppercase;

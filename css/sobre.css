@@ -17,12 +17,16 @@ body {
 
 }
 
+:root {
+    --div-background-color: #0c0c0c;
+}
+
 .barratopo {
     width: 100%;
     height: auto;
     display: flex;
     position: fixed;
-    background-color: #0c0c0c;
+    background-color: var(--div-background-color);
 }
 
 /*ul*/
@@ -151,21 +155,12 @@ a {
 }
 
 .rodape {
-    background-color: #0c0c0c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
+    background-color: var(--div-background-color);
+    text-align: center;
     padding: 10px;
 }
 
 /*ícones*/
-
-.fa-heart {
-    color: rgba(255, 0, 0, 0.685);
-    font-size: 1.20em;
-}
 
 .fa-dog {
     color: sandybrown;
