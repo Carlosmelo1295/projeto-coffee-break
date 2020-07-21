@@ -12,6 +12,7 @@ body {
     height: 100%;
     color: white;
     background-color: #171a21;
+    text-transform: uppercase;
 }
 
 /*Cor de background do rodapé e barra cabeçalho*/
@@ -27,6 +28,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    top: 0;
     background-color: var(--cor-background-div);
 
 }
@@ -67,6 +70,7 @@ body {
     flex-direction: column;
     padding: 50px;
     margin-bottom: 50px;
+    margin-top: 50px;
     letter-spacing: 1px;
 
 }
@@ -91,6 +95,7 @@ body {
     bottom: 0;
     position: relative;
     padding: 10px;
+    text-transform: none;
 
 
 }
