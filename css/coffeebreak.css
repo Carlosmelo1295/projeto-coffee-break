@@ -18,7 +18,7 @@ body {
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
-    color: #ffffff;
+    color: var(--letras);
     background-color: #0f0f13;
 }
 
@@ -27,6 +27,7 @@ body {
     --div-background-color: #0c0c0c;
     /*cores dos ícones do rodapé, do hover e pseudo elemento (linha que aparece quando passa o mouse)*/
     --cbc-rdp: #0984e3;
+    --letras: whitesmoke;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*\
@@ -48,6 +49,12 @@ body {
     cursor: pointer;
 }
 
+.container-cabecalho img:hover {
+    transform: translate3d(0, 0, 50px);
+    filter: brightness(50%);
+
+}
+
 /*ul*/
 .menu {
     list-style: none;
@@ -63,7 +70,6 @@ body {
 }
 
 .menu li a {
-    color: #fff;
     text-decoration: none;
     padding: 15px;
     opacity: 0.7;
@@ -92,7 +98,7 @@ body {
 
 /*Submenu*/
 .menu li ul {
-    margin-top: 20px;
+    margin-top: 18px;
     position: absolute;
     background-color: var(--div-background-color);
     display: none;
@@ -156,7 +162,7 @@ body {
 }
 
 .conteudo-subcabecalho {
-    color: #fff;
+    color: var(--letras);
     text-align: center;
     font-weight: 400;
     position: absolute;
@@ -172,7 +178,7 @@ body {
 
 .subcabecalho h4 {
     letter-spacing: 2px;
-    color: rgb(139, 139, 139);
+
 }
 
 /*autor foto da capa */
@@ -181,15 +187,11 @@ body {
     bottom: 10px;
     right: 100px;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.404);
 }
 
-.autor a {
-    color: rgba(255, 255, 255, 0.404);
-}
 
 .autor a:hover {
-    color: white;
+    color: var(--cbc-rdp);
 }
 
 .barra {
@@ -225,7 +227,7 @@ body {
 .destaque span {
     font-size: 15px;
     letter-spacing: 5px;
-    color: #ffffff;
+
 }
 
 /*-----------*\
@@ -260,14 +262,12 @@ body {
 
 /*class para manipular a legenda da foto*/
 .galeria li p {
-    color: #ffffff;
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
     position: absolute;
     top: 0;
-    background-color: red;
     width: 100%;
     opacity: 0;
     z-index: 2;
@@ -309,12 +309,11 @@ footer {
 
 .conteudo-rodape {
     text-align: center;
-    color: #fff;
     line-height: 2.3em;
     margin-top: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 12px;
     width: 100%;
 }
 
@@ -417,7 +416,7 @@ footer {
     }
 
     .icon-menu {
-        background-color: rgb(139, 139, 139);
+        background-color: var(--letras);
         margin-right: 20px;
         position: relative;
         width: auto;
@@ -483,12 +482,11 @@ footer {
 
     /*pseudo class para selecionar o ultimo LI dentro do UL(sub)*/
     .sub>li:last-child {
-        color: #ffffff;
         background-color: #0984e3;
     }
 
     .fa-angle-down {
-        color: white;
+        color: var(--letras);
         font-size: 20px;
         margin-left: 5px;
     }
@@ -498,9 +496,6 @@ footer {
         background-color: #0984e3;
     }
 
-    .menu-mobile a {
-        color: #fff;
-    }
 }
 
 @media (max-width: 800px) {
@@ -555,21 +550,10 @@ footer {
     }
 
     .destaque span {
-        color: whitesmoke;
         font-size: 0.7em;
         letter-spacing: 5px;
     }
 
-    .visitas {
-        padding: 1px;
-        right: 0;
-    }
-
-    .visitas a {
-        color: black;
-        font-size: 10px;
-        letter-spacing: 2px;
-    }
 }
 
 @media (max-width: 480px) {
