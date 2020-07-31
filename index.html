@@ -15,6 +15,7 @@
 
 <body id="conteudo">
   <header>
+
     <div id="top" class="container-cabecalho">
       <a href="index.html"> <img src="logos/mug_coffee.png" alt="logo" title="Clique para voltar ao início"></a>
       <ul class="menu">
@@ -47,32 +48,32 @@
         </ul>
       </nav>
     </div>
+
     <div class="subcabecalho">
       <div class="conteudo-subcabecalho">
         <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">!</span></h1>
         <h4>Imagens espetaculares criadas de artistas para artistas.</h4>
+        <form method="get">
+          <div class="procura">
+            <input type="search" name="search" id="procura" placeholder="Buscar imagem...">
+            <input type="submit" value="Buscar" id="btn">
+          </div>
+        </form>
       </div>
       <div class="autor">
         <span>Foto por <a href="https://unsplash.com/@scheier" target="_blank">@scheier</a></span>
       </div>
     </div>
+
   </header>
+
   <div class="destaque">
     <span>Fotos em destaque</span>
   </div>
+
   <!--Começo da galeria de imagens-->
   <div id="galeria" class="container-galeria">
     <ul class="galeria">
-      <li>
-        <a href="background/alien-cat.jpg" target="_blank"><img class="foto" src="background/alien-cat.jpg"
-            alt="Gato sendo abduzido" /></a>
-        <p>Abdução.</p>
-      </li>
-      <li>
-        <a href="background/olharAtento.jpg" target="_blank"><img class="foto" src="background/olharAtento.jpg"
-            alt="Mulher observando uma fogueira" /></a>
-        <p>Olhar atento.</p>
-      </li>
       <li>
         <a href="background/1080.jpg" target="_blank"><img class="foto" src="background/1080.jpg"
             alt="Navegando no espaço" /></a>
@@ -82,11 +83,6 @@
         <a href="background/spacecar.jpg" target="_blank"><img class="foto" src="background/spacecar.jpg"
             alt="Carro no espaço" /></a>
         <p>Carro espacial.</p>
-      </li>
-      <li>
-        <a href="background/SpaceMan.jpg" target="_blank"><img class="foto" src="background/SpaceMan.jpg"
-            alt="Astronauta na lua" /></a>
-        <p>Um pequeno passo para o homem mas um grande passo para a humanidade.</p>
       </li>
       <li>
         <a href="background/blur.jpg" target="_blank"><img class="foto" src="background/blur.jpg" alt="Fotógrafo" /></a>
@@ -122,8 +118,43 @@
             alt="Executando o feitiço (leviosa)" /></a>
         <p>wingardium leviosa</p>
       </li>
+      <li>
+        <a href="background/christmas.jpg" target="_blank"><img class="foto" src="background/christmas.jpg"
+            alt="Natal" /></a>
+        <p>Ah o natal... data que tudo fica de um jeitinho mágico. &#127877;&#127996;</p>
+      </li>
     </ul>
   </div>
+
+  <section class="dicas">
+    <div class="dicas_conteudo">
+      <h3>Algumas dicas simples sobre o painel de camadas para quem está começando.</h3>
+      <ol>
+        <li>Antes de por a mão na massa, estude a interface e principalmente o painel de ferramentas que
+          aparecerá no lado esquerdo da tela como na foto abaixo, ou siga o link &#10145; <a href="#">Clique aqui para
+            saber mais.</a>
+          <img src="dicas/painel.jpg" alt="Interface Photoshop">
+        </li>
+        <li>Para entender como a seção de camadas funciona, pegue 2 fotos com fundo transparente(.png), clique
+          em <strong>arquivos</strong> na barra superior da tela, depois clique em (novo) e escolha o tamanho da sua
+          imagem... Fazendo isso, volte ao painel superior e clique em abrir e escolha as 2 imagens de formato(.png).
+          <img src="dicas/novo.jpg" alt="Interface Photoshop">
+          <img src="dicas/tamanho.jpg" alt="Interface Photoshop">
+          <img src="dicas/criar.jpg" alt="Interface Photoshop">
+        </li>
+        <li>Após abrir, clique no cadeado ao lado da foto para destravar e arraste a foto para a página que você
+          criou, faça isso com as 2 imagens.
+          <img src="dicas/arrasta.jpg" alt="Interface Photoshop">
+        </li>
+        <li>Repare na camada de ajustes... você tem 2 fotinhas uma em baixo da outra... se clicar na fotinha de
+          baixo e arrastar pra cima, essa imagem vai sobrepor a outra como mostra a foto abaixo.
+          <img src="dicas/camada1.jpg" alt="Interface Photoshop">
+          <img src="dicas/camada2.jpg" alt="Interface Photoshop">
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!--Fim galeria-->
   <footer>
     <div id="contatos" class="conteudo-rodape">
