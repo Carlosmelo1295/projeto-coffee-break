@@ -17,3 +17,4 @@ function mudar2() {
         document.querySelector(".subGaleria").style.display = 'none';
     }
 }
+

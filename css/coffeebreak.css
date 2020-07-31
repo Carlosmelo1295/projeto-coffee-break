@@ -312,29 +312,27 @@ input {
 }
 
 section#dicas {
-    height: 90vh;
+    height: 100vh;
+    width: 100%;
     background-color: #323232;
     margin-bottom: 220px;
     overflow-y: scroll;
+
 }
 
 div.dicas_conteudo {
     line-height: 25px;
     color: var(--letras);
-    padding: 15px;
+    padding: 50px;
     column-count: 2;
     column-gap: 15px;
     text-align: left;
     letter-spacing: 1px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-
+    word-break: break-all;
 }
 
-ol {
+ul {
     margin-left: 10px;
-    list-style: outside;
-
 }
 
 section#dicas a {
@@ -525,7 +523,7 @@ footer {
         padding: 2px;
         cursor: pointer;
         display: none;
-    
+
     }
 
 
@@ -534,11 +532,12 @@ footer {
         position: relative;
         top: 0;
         display: none;
+
     }
 
     /*pseudo class para selecionar o ultimo LI dentro do UL(sub)*/
     .sub>li:last-child {
-        background-color: #0984e3;
+        background-color: var(--cbc-rdp);
     }
 
     .fa-angle-down {
@@ -578,7 +577,9 @@ footer {
 
     div.dicas_conteudo {
         font-size: 13px;
+        column-count: 1;
     }
+    
 }
 
 @media (max-width: 600px) {
