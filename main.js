@@ -1,4 +1,3 @@
-
 //mostrar e ocultar menu mobile
 function mudar() {
     let display = document.querySelector(".sub").style.display;

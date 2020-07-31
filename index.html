@@ -14,10 +14,11 @@
 </head>
 
 <body id="conteudo">
-  <header>
 
+  <header>
     <div id="top" class="container-cabecalho">
       <a href="index.html"> <img src="logos/mug_coffee.png" alt="logo" title="Clique para voltar ao início"></a>
+
       <ul class="menu">
         <li class="linhas-menu">
           <a href="#galeria">Galeria</a>
@@ -29,12 +30,15 @@
           </ul>
         </li>
         <li class="linhas-menu"><a href="agradecimentos.html">Agradecimentos</a></li>
+        <li class="linhas-menu"><a href="#dicas">Dicas</a></li>
         <li class="linhas-menu"><a href="sobre.html">Sobre</a></li>
       </ul>
+
       <nav class="menu-mobile">
         <img class="icon-menu" onclick="mudar()" src="icones/iconfinder_basics-12_296823.png" alt="ícone do menu">
         <ul class="sub">
           <li><a href="sobre.html">Sobre</a></li>
+          <li class="linhas-menu"><a href="#dicas">Dicas</a></li>
           <li><a href="agradecimentos.html">agradecimentos</a></li>
           <li onclick="mudar2()">
             galeria<i class="fas fa-angle-down"></i>
@@ -51,7 +55,7 @@
 
     <div class="subcabecalho">
       <div class="conteudo-subcabecalho">
-        <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">!</span></h1>
+        <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">|</span></h1>
         <h4>Imagens espetaculares criadas de artistas para artistas.</h4>
         <form action="/customers/search/SmartSearch" method="get">
           <div class="procura">
@@ -64,7 +68,6 @@
         <span>Foto por <a href="https://unsplash.com/@scheier" target="_blank">@scheier</a></span>
       </div>
     </div>
-
   </header>
 
   <div class="destaque">
@@ -126,13 +129,14 @@
     </ul>
   </div>
 
-  <section class="dicas">
+  <section id="dicas">
     <div class="dicas_conteudo">
       <h3>Algumas dicas simples sobre o painel de camadas para quem está começando.</h3>
       <hr>
       <ol>
         <li>Antes de por a mão na massa, estude a interface e principalmente o painel de ferramentas que
-          aparecerá no lado esquerdo da tela como na foto abaixo ou siga o link &#10145; <a href="https://helpx.adobe.com/br/photoshop/using/tools.html" target="_blank">Clique aqui para
+          aparecerá no lado esquerdo da tela como na foto abaixo ou siga o link &#10145; <a
+            href="https://helpx.adobe.com/br/photoshop/using/tools.html" target="_blank">Clique aqui para
             saber mais.</a>
           <img src="dicas/painel.jpg" alt="Interface Photoshop">
         </li>

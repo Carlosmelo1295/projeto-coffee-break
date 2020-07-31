@@ -214,6 +214,8 @@ input {
 
 .barra {
     animation: piscarBarra 500ms linear infinite;
+    font-weight: lighter;
+    
 }
 
 @keyframes piscarBarra {
@@ -311,7 +313,7 @@ input {
     filter: brightness(50%);
 }
 
-section.dicas {
+section#dicas {
     height: 90vh;
     background-color: #323232;
     margin-bottom: 220px;
@@ -337,7 +339,7 @@ ol {
 
 }
 
-section.dicas a {
+section#dicas a {
     color: var(--cbc-rdp);
 }
 
@@ -669,12 +671,10 @@ footer {
 }
 
 @media (max-width: 414px) {
-    section.dicas {
+    section#dicas {
         margin-bottom: 250px;
-
     }
 }
-
 
 @media (max-width:360px) {
     .container-galeria {
