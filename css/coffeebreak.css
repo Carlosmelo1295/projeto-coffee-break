@@ -207,7 +207,6 @@ input {
     font-size: 14px;
 }
 
-
 .autor a:hover {
     color: var(--cbc-rdp);
 }
@@ -215,7 +214,6 @@ input {
 .barra {
     animation: piscarBarra 500ms linear infinite;
     font-weight: lighter;
-    
 }
 
 @keyframes piscarBarra {
@@ -515,9 +513,10 @@ footer {
 
     /*ul sub menu*/
     .menu-mobile ul {
-        position: absolute;
+        position: fixed;
         right: 0;
-        width: 250px;
+        width: 100%;
+        height: 100vh;
         background-color: var(--div-background-color);
         top: 60px;
         text-align: center;
@@ -526,22 +525,9 @@ footer {
         padding: 2px;
         cursor: pointer;
         display: none;
-        animation: entrada 500ms linear;
+    
     }
 
-    @keyframes entrada {
-        0% {
-            width: 0%;
-        }
-
-        50% {
-            width: 150px;
-        }
-
-        100% {
-            width: 250px;
-        }
-    }
 
     /*selecionar UL dentro da LI (galeria) menu-mobile*/
     .sub ul {
