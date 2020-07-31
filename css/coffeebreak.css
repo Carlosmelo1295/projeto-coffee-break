@@ -147,7 +147,7 @@ input {
     margin-top: 10px;
     border: 2px solid var(--letras);
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 #procura {
@@ -312,27 +312,29 @@ input {
 }
 
 section.dicas {
-    height: 100vh;
+    height: 90vh;
     background-color: #323232;
     margin-bottom: 220px;
     overflow-y: scroll;
 }
 
 div.dicas_conteudo {
-    line-height: 30px;
+    line-height: 25px;
     color: var(--letras);
     padding: 15px;
     column-count: 2;
-    column-gap: 10px;
+    column-gap: 15px;
     text-align: left;
     letter-spacing: 1px;
-    word-break: break-all;
+    margin-bottom: 15px;
+    margin-top: 15px;
 
 }
 
 ol {
     margin-left: 10px;
     list-style: outside;
+
 }
 
 section.dicas a {
@@ -342,14 +344,19 @@ section.dicas a {
 div.dicas_conteudo>h3 {
     text-align: center;
     background-color: var(--cbc-rdp);
-    border-radius: 10px;
     padding: 10px;
+}
 
+hr {
+    color: var(--letras);
 }
 
 div.dicas_conteudo img {
-    width: 100% !important;
-    border: 3px solid var(--cbc-rdp);
+    width: 70% !important;
+    border: 2px solid var(--cbc-rdp);
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
