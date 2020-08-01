@@ -300,7 +300,7 @@ input {
 
 /*class para manipular a legenda da foto*/
 .galeria li p {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -330,7 +330,7 @@ input {
 }
 img[data-src] {
 	opacity: 0;
-	transform: scale(-100%);
+	transform: translateX(-100%);
 }
 img[src] {
 	opacity: 1;
