@@ -18,3 +18,26 @@ function mudar2() {
     }
 }
 
+//validar campo de pesquisa
+
+function focar() {
+    var focusBox = document.querySelector('div.procura')
+    var search = document.querySelector('#procura')
+    var btn = document.querySelector('#btn')
+    if (search.value == "") {
+        focusBox.style.boxShadow = '0 0 10px red'
+        alert('Caixa vazia!')
+    } else {
+        btn.style.transform = "translateX(0px)"
+        btn.style.boxShadow = 'none'
+
+    }
+}
+
+function desfocar() {
+    var desfoque = document.querySelector('div.procura')
+    var btn = document.querySelector('#btn')
+    btn.style.transform = "translateX(5px)"
+    btn.style.boxShadow = '0 5px 10px black'
+    desfoque.style.boxShadow = 'none'
+}

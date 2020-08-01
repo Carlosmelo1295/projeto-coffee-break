@@ -57,12 +57,14 @@
       <div class="conteudo-subcabecalho">
         <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">|</span></h1>
         <h4>Imagens espetaculares criadas de artistas para artistas.</h4>
-        <form action="/customers/search/SmartSearch" method="get">
+
+        <form action="novaTela.php" method="post" target="_blank">
           <div class="procura">
-            <input type="search" name="search" id="procura" placeholder="Buscar imagem...">
-            <input type="submit" value="&#128269;" id="btn">
+            <input type="search" onkeydown="desfocar()" name="search" id="procura" placeholder="Buscar...">
+            <input type="submit" value="&#128269;" onclick="focar()" id="btn">
           </div>
         </form>
+
       </div>
       <div class="autor">
         <span>Foto por <a href="https://unsplash.com/@scheier" target="_blank">@scheier</a></span>
@@ -133,7 +135,7 @@
     <div class="dicas_conteudo">
       <h3>Algumas dicas simples sobre o painel de camadas para quem está começando.</h3>
       <hr>
-      <ul>
+      <ol>
         <li>Antes de por a mão na massa, estude a interface e principalmente o painel de ferramentas que
           aparecerá no lado esquerdo da tela como na foto abaixo ou siga o link &#10145; <a
             href="https://helpx.adobe.com/br/photoshop/using/tools.html" target="_blank">Clique aqui para
@@ -156,7 +158,7 @@
           <img src="dicas/camada1.jpg" alt="Interface Photoshop">
           <img src="dicas/camada2.jpg" alt="Interface Photoshop">
         </li>
-      </ul>
+      </ol>
     </div>
   </section>
 
