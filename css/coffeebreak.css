@@ -328,6 +328,15 @@ input {
 .foto:hover {
     filter: brightness(50%);
 }
+img[data-src] {
+	opacity: 0;
+	transform: scale(-100%);
+}
+img[src] {
+	opacity: 1;
+	transform: translateX(0);
+	transition: .5s ease-in-out;
+}
 
 section#dicas {
     height: 100vh;
@@ -363,7 +372,6 @@ div.dicas_conteudo>h3 {
 }
 
 div.dicas_conteudo img {
-    width: 100% !important;
     border: 2px solid var(--cbc-rdp);
     display: flex;
     margin-top: 10px;

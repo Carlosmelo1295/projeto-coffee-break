@@ -36,3 +36,14 @@ function desfocar() {
     btn.style.boxShadow = 'none'
     desfoque.style.boxShadow = 'none'
 }
+//scroll
+function ativaNoScroll() {
+
+    document.querySelectorAll('.foto').forEach((img, index) => {
+        if (img.getBoundingClientRect().top < window.innerHeight) {
+            img.src = img.getAttribute('data-src');
+        };
+    })
+}
+
+window.addEventListener('scroll', ativaNoScroll);

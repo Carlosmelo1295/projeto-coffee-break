@@ -1,6 +1,13 @@
+:root {
+    /*background do cabeçalho e do rodapé*/
+    --div-background-color: #0c0c0c;
+    /*cores dos ícones do rodapé, do hover e pseudo elemento (linha que aparece quando passa o mouse)*/
+    --letras: whitesmoke;
+}
+
 .subcabecalho-animais {
     background-image: url(../fotos-animais/20200704155239_IMG_0031.jpg);
-    height: 80vh;
+    height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
 }
 
 .subcabecalho-animais::before {
@@ -21,7 +29,7 @@
 }
 
 .conteudo-subcabecalho-animais {
-    color: whitesmoke;
+    color:var(--letras);
     text-align: center;
     font-weight: 400;
     position: absolute;
@@ -30,13 +38,25 @@
 }
 
 .subcabecalho-animais h1 {
-    text-shadow: 5px 5px 5px #1d1e1f;
+    text-shadow: 5px 5px 5px var(--div-background-color);
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
 .subcabecalho-animais h4 {
     letter-spacing: 2px;
-    color: rgb(139, 139, 139);
+    color: var(--letras);
 
+}
+
+.container-galeria_animais {
+    background-image: url(../sobre-fotos/fundo.jpg);
+    width: 100%;
+    column-count: 3;
+    column-gap: 5px;
+    text-align: center;
+    overflow: hidden;
+    padding: 5%;
+    background-attachment: fixed;
+    margin-bottom: 250px;
 }

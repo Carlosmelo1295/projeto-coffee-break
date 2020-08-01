@@ -1,6 +1,13 @@
+:root {
+    /*background do cabeçalho e do rodapé*/
+    --div-background-color: #0c0c0c;
+    /*cores dos ícones do rodapé, do hover e pseudo elemento (linha que aparece quando passa o mouse)*/
+    --letras: whitesmoke;
+}
+
 .subcabecalho-fantasia {
-    background-image: url(../background/alone_in_the_dark_25_by_null_entity_de07nhp3.jpg);
-    height: 80vh;
+    background-image: url(../background//patron-min.jpg);
+    height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -8,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
 }
 
 .subcabecalho-fantasia::before {
@@ -30,14 +38,26 @@
 }
 
 .subcabecalho-fantasia h1 {
-    text-shadow: 5px 5px 5px #1d1e1f;
+    text-shadow: 5px 5px 5px var(--div-background-color);
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
 .subcabecalho-fantasia h4 {
     letter-spacing: 2px;
-    color: rgb(139, 139, 139);
+    color: var(--letras);
 
 }
 
+.container-galeria_fantasia{
+    background-image: url(../sobre-fotos/fundo.jpg);
+    width: 100%;
+    column-count: 3;
+    column-gap: 5px;
+    text-align: center;
+    overflow: hidden;
+    padding: 5%;
+    background-attachment: fixed;
+    margin-bottom: 250px;
+
+}
