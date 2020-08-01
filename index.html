@@ -55,13 +55,13 @@
 
     <div class="subcabecalho">
       <div class="conteudo-subcabecalho">
-        <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">|</span></h1>
+        <h1>Sejam bem-vindos ao universo da imaginação<span class="barra">_</span></h1>
         <h4>Imagens espetaculares criadas de artistas para artistas.</h4>
 
-        <form action="novaTela.php" method="post" target="_blank">
+        <form action="#" method="post" target="_blank">
           <div class="procura">
-            <input type="search" onkeydown="desfocar()" name="search" id="procura" placeholder="Buscar...">
-            <input type="submit" value="&#128269;" onclick="focar()" id="btn">
+            <input type="search" onblur="desfocar()" onfocus="focar()"  name="search" id="procura" placeholder="Buscar...">
+            <input type="submit" value="&#128269;" id="btn">
           </div>
         </form>
 
