@@ -12,22 +12,28 @@ a {
 
 html,
 body {
-    font-size: 14pt;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     scroll-behavior: smooth;
-    color: var(--letras);
     background-color: var(--div-background-color);
 }
 
+body,
+textarea {
+    color: var(--letras);
+    font: 500 1rem poppins;
+}
+
 :root {
-    /*background do cabeçalho e do rodapé*/
     --div-background-color: #0c0c0c;
-    /*cores dos ícones do rodapé, do hover e pseudo elemento (linha que aparece quando passa o mouse)*/
-    --cbc-rdp: #0984e3;
-    --letras: whitesmoke;
+    --details: #8083FF;
+    --letras: #F2ECFF;
+    --color-caixa-dicas:#24292e;
+    --color-txt-dicas: #A479F4;
+    --color-primary-darker: #6842c2;
+    --color-text-title: #32264D;
+    --color-text-base: #6A6180;
+    --color-box-footer: #FAFAFC;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*\
@@ -62,7 +68,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    font-size: 10pt;
+    font-size: 0.8rem;
 }
 
 .menu li {
@@ -75,12 +81,12 @@ body {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-weight: normal;
+
 }
 
 .menu li a:hover {
     opacity: 1;
-    color: var(--cbc-rdp);
+    color: var(--details);
 }
 
 /*Efeito botão de menu*/
@@ -91,8 +97,7 @@ body {
     top: 35px;
     width: 100%;
     height: 1px;
-    background-color: var(--cbc-rdp);
-    box-shadow: 0 0 10px var(--cbc-rdp);
+    background-color: var(--details);
     animation: barra linear 300ms;
 }
 
@@ -103,7 +108,6 @@ body {
     background-color: var(--div-background-color);
     display: none;
     text-align: center;
-    font-size: 11pt;
     list-style: none;
     line-height: 2.5em;
 }
@@ -146,9 +150,10 @@ input {
     text-align: left;
     border: 2px solid var(--letras);
     padding: 5px;
-    
+
 }
-.procura{
+
+.procura {
     background-image: linear-gradient(to right top, #18002d, #602d47, #9d6764, #cdaa90, #f7f1d1);
     display: flex;
     justify-content: center;
@@ -165,10 +170,11 @@ input {
     width: 230px;
 
 }
-#btn{
+
+#btn {
     width: 40px;
     text-align: center;
-    
+
 }
 
 #btn:hover {
@@ -200,7 +206,6 @@ input {
 .conteudo-subcabecalho {
     color: var(--letras);
     text-align: center;
-    font-weight: 400;
     position: absolute;
     border-radius: 10px;
     padding: 10px;
@@ -222,11 +227,11 @@ input {
     position: absolute;
     bottom: 10px;
     right: 100px;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .autor a:hover {
-    color: var(--cbc-rdp);
+    color: var(--details);
 }
 
 .barra {
@@ -261,7 +266,7 @@ input {
 }
 
 .destaque span {
-    font-size: 15px;
+    font-size: 1rem;
     letter-spacing: 5px;
 
 }
@@ -275,7 +280,6 @@ input {
 .container-galeria {
     background-image: url(../sobre-fotos/fundo.jpg);
     width: 100%;
-    background-color: #0f0f13;
     animation: load 1s;
     column-count: 4;
     column-gap: 5px;
@@ -300,16 +304,16 @@ input {
 
 /*class para manipular a legenda da foto*/
 .galeria li p {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     position: absolute;
-    top: 0;
+    top: 10%;
     width: 100%;
     opacity: 0;
     z-index: 2;
     transition: 500ms ease-in-out;
+
 }
 
 .galeria li:hover p {
@@ -328,54 +332,73 @@ input {
 .foto:hover {
     filter: brightness(50%);
 }
+
 img[data-src] {
-	opacity: 0;
-	transform: translateX(-100%);
+    opacity: 0;
+    transform: translateX(-100%);
 }
+
 img[src] {
-	opacity: 1;
-	transform: translateX(0);
-	transition: .5s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s ease-in-out;
+
 }
 
 section#dicas {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to right top, #18002d, #602d47, #9d6764, #cdaa90, #f7f1d1);
+    background-image: url(../sobre-fotos/fundo.jpg);
     margin-bottom: 220px;
     overflow-y: scroll;
+    background-attachment: fixed;
 }
 
 div.dicas_conteudo {
     line-height: 25px;
-    color: var(--letras);
-    padding: 50px;
+    padding: 30px;
     column-count: 2;
     column-gap: 50px;
     text-align: left;
     letter-spacing: 1px;
-    
+    color: var(--color-light);
+    background-color: var(--color-caixa-dicas);
+    margin: 2em;
+    border-radius: 5px;
+    font-size: 0.9rem;
+
 }
 
 .dicas_conteudo ol {
-   text-align: justify;
+    text-align: justify;
+    word-break: break-all;
 }
 
 section#dicas a {
-    text-decoration: line-through var(--cbc-rdp);
+    text-decoration: line-through var(--details);
 }
 
 div.dicas_conteudo>h3 {
     text-align: center;
-    background-color: var(--cbc-rdp);
+    background-color: var(--details);
     padding: 10px;
+    color: var(--letras);
+
 }
 
+.dicas_conteudo ol::before {
+    height: 5px;
+    background-color: var(--letras);
+    content: '';
+    display: block;
+}
+
+
 div.dicas_conteudo img {
-    border: 2px solid var(--cbc-rdp);
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 1px solid var(--letras);
 
 }
 
@@ -401,15 +424,14 @@ footer {
     margin-top: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 0.8rem;
     width: 100%;
 }
 
 #report a {
-    color: var(--cbc-rdp);
+    color: var(--details);
     opacity: 0.6;
-    font-size: 12px;
-    border: 1px solid var(--cbc-rdp);
+    border: 1px solid var(--details);
     padding: 3px;
     border-radius: 20px;
 }
@@ -420,7 +442,6 @@ footer {
 
 /*div que envolve os logos do rodapé*/
 .redes {
-    font-size: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
@@ -433,7 +454,7 @@ footer {
     display: block;
     width: 100%;
     height: 1px;
-    background-color: var(--cbc-rdp);
+    background-color: var(--details);
 }
 
 .botao {
@@ -442,34 +463,24 @@ footer {
     border: none;
     padding: 6px;
     border-radius: 5px;
-    background-color: var(--cbc-rdp);
+    background-color: var(--details);
 }
 
 .botao:hover {
     filter: brightness(50%);
 }
 
-.fa-github-square {
-    color: var(--cbc-rdp);
-    border: 1px solid var(--cbc-rdp);
+.fab {
+    color: var(--details);
+    border: 1px solid var(--details);
     padding: 10px;
     border-radius: 50px;
+    margin-left: 15px;
+    font-size: 2.0rem;
 }
 
-.fa-github-square:hover {
-    filter: brightness(50%);
-}
-
-.fa-instagram {
-    color: var(--cbc-rdp);
-    border: 1px solid var(--cbc-rdp);
-    padding: 10px;
-    border-radius: 50px;
-    margin-left: 20px;
-}
-
-.fa-instagram:hover {
-    filter: brightness(50%);
+.fab:hover {
+    background-color: var(--color-light);
 }
 
 /*-----------*\
@@ -487,15 +498,6 @@ footer {
 @media (max-width: 1024px) {
     .menu {
         display: none;
-    }
-
-    .subcabecalho h1 {
-        font-size: 35px;
-        line-height: 65px;
-    }
-
-    .subcabecalho h4 {
-        font-size: 20px;
     }
 
     .container-galeria {
@@ -540,7 +542,6 @@ footer {
         top: 60px;
         text-align: center;
         text-transform: uppercase;
-        font-size: 15px;
         padding: 2px;
         cursor: pointer;
         display: none;
@@ -558,7 +559,7 @@ footer {
 
     /*pseudo class para selecionar o ultimo LI dentro do UL(sub)*/
     .sub>li:last-child {
-        background-color: var(--cbc-rdp);
+        background-color: var(--details);
     }
 
     .fa-angle-down {
@@ -576,11 +577,11 @@ footer {
 
 @media (max-width: 800px) {
     .subcabecalho h1 {
-        font-size: 20px;
+        font-size: 1.5rem;
     }
 
     .subcabecalho h4 {
-        font-size: 15px;
+        font-size: 1rem;
     }
 
     .conteudo-rodape {
@@ -593,24 +594,24 @@ footer {
     }
 
     .galeria li p {
-        font-size: 11px;
+        font-size: 0.8rem
     }
 
     div.dicas_conteudo {
-        font-size: 13px;
-        column-count: 1;
+        font-size: 0.8rem;
+
     }
-    
+
 }
 
 @media (max-width: 600px) {
     .subcabecalho h1 {
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 1rem;
+
     }
 
     .subcabecalho h4 {
-        font-size: 14px;
+        font-size: 0.7rem;
     }
 
     .cabecalho {
@@ -624,7 +625,7 @@ footer {
     }
 
     .galeria li p {
-        font-size: 10px;
+        font-size: 0.5rem;
         line-height: normal;
         text-align: center;
     }
@@ -634,17 +635,13 @@ footer {
         letter-spacing: 5px;
     }
 
+    div.dicas_conteudo {
+        column-count: 1;
+    }
+
 }
 
 @media (max-width: 480px) {
-    .subcabecalho h1 {
-        font-size: 15px;
-        line-height: 26px;
-    }
-
-    .subcabecalho h4 {
-        font-size: 12px;
-    }
 
     .barravertical {
         height: 10px;
@@ -652,29 +649,32 @@ footer {
     }
 
     .container-galeria {
-        column-count: 2;
+        column-count: 1;
+    }
+
+    .galeria li p {
+        font-size: 1.5rem;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    #procura {
+        width: 160px;
     }
 
     .conteudo-rodape {
         line-height: 2.8em;
+        font-size: 0.6rem;
     }
 
-    .redes {
-        font-size: 20px;
+    .fab {
+        font-size: 1.5rem;
+        padding: 8px;
     }
 
-    .fa-github-square {
-        padding: 5px;
-    }
 
-    .fa-instagram {
-        padding: 5px;
-        margin-left: 8px;
-    }
-
-    .botao {
-        padding: 3px;
-    }
 
 }
 
@@ -682,34 +682,55 @@ footer {
     section#dicas {
         margin-bottom: 250px;
     }
+
+    div.dicas_conteudo>h3 {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width:360px) {
+    .subcabecalho h1 {
+        font-size: 0.6rem;
+        line-height: 20px;
+
+    }
+
+    .subcabecalho h4 {
+        font-size: 0.5rem;
+    }
+
     .container-galeria {
         column-count: 1;
     }
 
+    div.dicas_conteudo {
+        column-count: 1;
+        font-size: 0.7rem;
+
+    }
+
     div.dicas_conteudo>h3 {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 320px) {
-    .subcabecalho h1 {
-        font-size: 12px;
-        line-height: 25px;
-    }
-
-    .subcabecalho h4 {
-        font-size: 10px;
-        line-height: 15px;
+        font-size: 0.8rem;
     }
 
     .conteudo-rodape {
-        font-size: 9px;
-        margin: 0 10px;
-        margin-top: 10px;
+        line-height: 2.8em;
+        font-size: 0.5rem;
+
     }
+
+    .fab {
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+
+    .botao {
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 320px) {
 
     .barravertical {
         height: 9px;
@@ -719,5 +740,11 @@ footer {
     .container-galeria {
         column-count: 1;
     }
+
+    .galeria li p {
+        font-size: 1rem;
+    }
+
+
 
 }
