@@ -1,18 +1,157 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.subcabecalho-animais {
-    background-image: url(../fotos-animais/20200704155239_IMG_0031.jpg);
+a {
+    text-decoration: none;
+    color: var(--letras);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: var(--div-background-color);
+}
+
+body,
+textarea {
+    color: var(--letras);
+    font: 500 1rem poppins;
+}
+
+:root {
+    --div-background-color: #0c0c0c;
+    --details: #8083FF;
+    --letras: #F2ECFF;
+    --color-caixa-dicas: #24292e;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*\
+    COMEÇO DA SEÇÃO CABEÇALHO(QUE CONTÉM LOGO E MENU) E DO SUBCABEÇALHO ( QUE CONTÉM CAPA E MENSAGEM DE BOAS VINDAS 
+    \*--------------------------------------------------------------------------------------------------------------*/
+/*barra que contem o logo e o menu */
+.container-cabecalho {
+    background: var(--div-background-color);
+    display: flex;
+    z-index: 20000;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.container-cabecalho img {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.container-cabecalho img:hover {
+    transform: translate3d(0, 0, 50px);
+    filter: brightness(50%);
+
+}
+
+/*ul*/
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 15px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+
+.menu li a:hover {
+    opacity: 1;
+    color: var(--details);
+}
+
+/*Efeito botão de menu*/
+.menu .linhas-menu:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--details);
+    animation: barra linear 300ms;
+}
+
+/*Submenu*/
+.menu li ul {
+    margin-top: 18px;
+    position: absolute;
+    background-color: var(--div-background-color);
+    display: none;
+    text-align: center;
+    list-style: none;
+    line-height: 2.5em;
+}
+
+/*Submenu*/
+.menu li:hover ul {
+    display: block;
+}
+
+@keyframes barra {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.subcabecalho {
     height: 60vh;
+    background-image: url(../fotos-animais/20200704155239_IMG_0031.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed;
+    animation: load 2s;
 }
 
-.subcabecalho-animais::before {
+@keyframes load {
+    to {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+/*filtro para deixar a foto do submenu com menos iluminação*/
+.subcabecalho::before {
     content: '';
     position: absolute;
     top: 0;
@@ -22,35 +161,430 @@
     background-color: rgba(0, 0, 0, 0.13);
 }
 
-.conteudo-subcabecalho-animais {
-    color:var(--letras);
+.conteudo-subcabecalho {
+    color: var(--letras);
     text-align: center;
-    font-weight: 400;
     position: absolute;
     border-radius: 10px;
     padding: 10px;
 }
 
-.subcabecalho-animais h1 {
-    text-shadow: 5px 5px 5px var(--div-background-color);
+.subcabecalho h1 {
+    text-shadow: 5px 5px 5px #1d1e1f;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
-.subcabecalho-animais h4 {
+.subcabecalho h4 {
     letter-spacing: 2px;
-    color: var(--letras);
 
 }
 
-.container-galeria_animais {
+/*autor foto da capa */
+.autor {
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    font-size: 0.8rem;
+}
+
+.autor a:hover {
+    color: var(--details);
+}
+
+.barra {
+    animation: piscarBarra 500ms linear infinite;
+    font-weight: lighter;
+}
+
+@keyframes piscarBarra {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*-----------*\
+  FIM DA SEÇÃO
+\*-----------*/
+/*----------------------------------------*\
+   COMEÇO DA GALERIA QUE CONTÉM AS IMAGENS 
+\*----------------------------------------*/
+.container-galeria {
     background-image: url(../sobre-fotos/fundo.jpg);
     width: 100%;
-    column-count: 3;
+    animation: load 1s;
+    column-count: 4;
     column-gap: 5px;
     text-align: center;
     overflow: hidden;
     padding: 5%;
     background-attachment: fixed;
-    margin-bottom: 250px;
+    margin-bottom: 12em;
+}
+
+/*class para manipular ul*/
+.galeria {
+    list-style: none;
+}
+
+.galeria li {
+    position: relative;
+    display: block;
+
+}
+
+/*class para manipular a legenda da foto*/
+.galeria li p {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+    transition: 500ms ease-in-out;
+    padding: 8px;
+
+}
+
+.galeria li:hover p {
+    opacity: 1;
+}
+
+/*class para manipular foto*/
+.foto {
+    width: 100% !important;
+    height: auto !important;
+    transition: 500ms;
+    border-radius: 4px;
+
+}
+
+.foto:hover {
+    filter: brightness(50%);
+}
+
+img[data-src] {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+img[src] {
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s ease-in-out;
+
+}
+
+/*-----------*\
+   FIM DA SEÇÃO
+\*-----------*/
+/*----------------*\
+  COMEÇO DO RODAPÉ
+\*----------------*/
+footer {
+    background-color: var(--div-background-color);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: -100;
+    width: 100%;
+}
+
+.conteudo-rodape {
+    text-align: center;
+    line-height: 2.3em;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+#report a {
+    color: var(--details);
+    opacity: 0.6;
+    border: 1px solid var(--details);
+    padding: 3px;
+    border-radius: 20px;
+}
+
+#report a:hover {
+    opacity: 1;
+    background-color: var(--letras);
+}
+
+/*div que envolve os logos do rodapé*/
+.redes {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.redes::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--details);
+}
+
+.botao {
+    position: absolute;
+    right: 10px;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: var(--details);
+}
+
+.botao:hover {
+    background-color: var(--letras);
+}
+
+.fab {
+    color: var(--details);
+    border: 1px solid var(--details);
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 15px;
+    font-size: 2.0rem;
+}
+
+.fab:hover {
+    background-color: var(--letras);
+}
+
+/*-----------*\
+    FIM DA SEÇÃO
+    \*-----------*/
+/*----------------------------------------*\
+    DAQUI PARA BAIXO CONTÉM AS MEDIA QUERIES
+    \*----------------------------------------*/
+@media (min-width: 1024px) {
+    .menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+
+    .container-galeria {
+        column-count: 3;
+        margin-bottom: 30em;
+
+    }
+
+    .icon-menu {
+        background-color: var(--letras);
+        margin-right: 20px;
+        position: relative;
+        width: auto;
+        height: 45px;
+        top: 8px;
+    }
+
+    .icon-menu:hover {
+        filter: brightness(70%);
+    }
+
+    /*ul principal*/
+    .menu-mobile {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu-mobile li {
+        list-style: none;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
+    /*ul sub menu*/
+    .menu-mobile ul {
+        position: fixed;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--div-background-color);
+        top: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 2px;
+        cursor: pointer;
+        display: none;
+    }
+
+    /*selecionar UL dentro da LI (galeria) menu-mobile*/
+    .sub ul {
+        position: relative;
+        top: 0;
+        display: none;
+
+    }
+
+    /*pseudo class para selecionar o ultimo LI dentro do UL(sub)*/
+    .sub>li:last-child {
+        background-color: var(--details);
+    }
+
+    .fa-angle-down {
+        color: var(--letras);
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    /*sombra menu mobile*/
+    .menu-mobile ul li:hover {
+        background-color: #0984e3;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .subcabecalho h1 {
+        font-size: 1.5rem;
+    }
+
+    .subcabecalho h4 {
+        font-size: 1rem;
+    }
+
+    .conteudo-rodape {
+        margin-top: 2.8em;
+        position: relative;
+    }
+
+    .container-galeria {
+        column-count: 3;
+        margin-bottom: 10em;
+    }
+
+    .galeria li p {
+        font-size: 0.8rem
+    }
+}
+
+@media (max-width: 600px) {
+    .subcabecalho h1 {
+        font-size: 1rem;
+
+    }
+
+    .subcabecalho h4 {
+        font-size: 0.7rem;
+    }
+
+    .cabecalho {
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-galeria {
+        column-count: 3;
+    }
+
+    .galeria li p {
+        font-size: 0.5rem;
+        line-height: normal;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .barravertical {
+        height: 10px;
+        margin-top: 5px;
+    }
+
+    .container-galeria {
+        column-count: 1;
+    }
+
+    .galeria li p {
+        font-size: 1rem;
+    }
+
+    .conteudo-rodape {
+        line-height: 2.8em;
+        font-size: 0.6rem;
+    }
+
+    .fab {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+}
+
+@media (max-width: 414px) {
+    div.dicas_conteudo>h3 {
+        font-size: 0.8rem;
+    }
+    .container-galeria {
+        margin-bottom: 16em;
+    }
+}
+
+@media (max-width:360px) {
+    .subcabecalho h1 {
+        font-size: 0.6rem;
+        line-height: 20px;
+    }
+
+    .subcabecalho h4 {
+        font-size: 0.5rem;
+    }
+
+    .container-galeria {
+        column-count: 1;
+        margin-bottom: 10em;
+    }
+
+    .conteudo-rodape {
+        line-height: 2.8em;
+        font-size: 0.5rem;
+    }
+
+    .fab {
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+
+    .botao {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .barravertical {
+        height: 9px;
+        margin-top: 5px;
+    }
+
+    .container-galeria {
+        column-count: 1;
+    }
+
 }

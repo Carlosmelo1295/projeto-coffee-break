@@ -297,8 +297,8 @@ input {
 
 /*class para manipular a legenda da foto*/
 .galeria li p {
-    font-size: 1rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
     position: absolute;
     top: 10%;
@@ -466,8 +466,8 @@ footer {
 .fab {
     color: var(--details);
     border: 1px solid var(--details);
-    padding: 10px;
-    border-radius: 50px;
+    padding: 5px;
+    border-radius: 10px;
     margin-left: 15px;
     font-size: 2.0rem;
 }
@@ -582,6 +582,7 @@ footer {
 
     .container-galeria {
         column-count: 3;
+        margin-bottom: inherit;
     }
 
     .galeria li p {
@@ -592,6 +593,13 @@ footer {
         font-size: 0.8rem;
 
     }
+
+    footer {
+        position: inherit;
+    }
+    section#dicas{
+        margin-bottom: 0px;
+        }
 }
 
 @media (max-width: 600px) {
@@ -628,7 +636,7 @@ footer {
     div.dicas_conteudo {
         column-count: 1;
     }
-
+    
 }
 
 @media (max-width: 480px) {
