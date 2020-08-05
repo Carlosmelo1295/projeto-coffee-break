@@ -1,9 +1,3 @@
-:root {
-    /*background do cabeçalho e do rodapé*/
-    --div-background-color: #0c0c0c;
-    /*cores dos ícones do rodapé, do hover e pseudo elemento (linha que aparece quando passa o mouse)*/
-    --letras: whitesmoke;
-}
 
 .subcabecalho-fantasia {
     background-image: url(../background//patron-min.jpg);
@@ -29,7 +23,7 @@
 }
 
 .conteudo-subcabecalho-fantasia {
-    color: whitesmoke;
+    color: var(--letras);
     text-align: center;
     font-weight: 400;
     position: absolute;

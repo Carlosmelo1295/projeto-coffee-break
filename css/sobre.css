@@ -7,17 +7,24 @@
 
 html,
 body {
-    font-family: "Colfax", sans-serif;
-    font-weight: 400;
     width: 100%;
     height: 100%;
     background-image: url(../sobre-fotos/fundo.jpg);
-    background-size: 100%;
-    color: #ffffff;
+    background-attachment: fixed;
+}
+
+body,
+textarea {
+    color: var(--letras);
+    font: 500 1rem poppins;
 }
 
 :root {
     --div-background-color: #0c0c0c;
+    --details: #8083FF;
+    --letras: #F2ECFF;
+    --color-caixa-sobre: #24292e;
+    font-size: 90%;
 }
 
 .barratopo {
@@ -25,6 +32,7 @@ body {
     height: auto;
     display: flex;
     position: fixed;
+    top: 0;
     background-color: var(--div-background-color);
 }
 
@@ -38,7 +46,7 @@ body {
 }
 
 a {
-    color: #ffffff;
+    color: var(--letras);
 }
 
 .menu li {
@@ -49,13 +57,13 @@ a {
     font-weight: normal;
     text-transform: uppercase;
     padding: 15px;
-    border: solid 1px #16a7f6;
+    border: solid 1px var(--details);
     border-radius: 30px;
 }
 
 .menu li:hover {
     opacity: 1;
-    background-color: #16a7f6;
+    background-color: var(--details);
 }
 
 .fa-home {
@@ -67,29 +75,26 @@ a {
     width: 100%;
     height: auto;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.37);
 }
 
 .box-sobre-autor::before {
     content: 'Sobre o autor';
     display: flex;
-    background-color: #15202b62;
+    background-color: var(--details);
     height: 40px;
-    width: 100%;
     align-items: center;
     justify-content: center;
     font-size: 1.70em;
-    font-weight: 700;
 }
 
 .box-sobre-autor {
-    background-color: #06090c;
+    background-color: var(--color-caixa-sobre);
     width: 150vh;
     height: auto;
     margin-bottom: 50px;
     margin-top: 6em;
     line-height: 2.3em;
-    
+
 }
 
 .minhafoto {
@@ -105,33 +110,30 @@ a {
     font-size: 1.1em;
     padding: 20px;
     letter-spacing: 1px;
-    font-weight: normal;
 }
 
 .box-principal-site {
     display: flex;
     width: 100%;
-    height:auto;
+    height: auto;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.37);
 }
 
 .box-sobre-site::before {
     content: 'Sobre o site';
     display: flex;
-    background-color: #15202b62;
+    background-color: var(--details);
     height: 40px;
     width: 100%;
     align-items: center;
     justify-content: center;
     font-size: 1.70em;
-    font-weight: 700;
 }
 
 .box-sobre-site {
     width: 150vh;
     height: auto;
-    background-color: #06090c;
+    background-color: var(--color-caixa-sobre);
     margin-bottom: 50px;
     margin-top: 6em;
     line-height: 2.3em;
@@ -142,7 +144,6 @@ a {
     font-size: 1.1em;
     padding: 20px;
     letter-spacing: 1px;
-    font-weight: normal;
 }
 
 .rodape {
