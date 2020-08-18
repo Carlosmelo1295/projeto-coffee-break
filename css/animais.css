@@ -4,6 +4,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .pace-inactive {
+    display: none;
+  }
+  
+  .pace .pace-progress {
+    background:var(--details);
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+  }
 
 a {
     text-decoration: none;
@@ -38,7 +61,7 @@ textarea {
 .container-cabecalho {
     background: var(--div-background-color);
     display: flex;
-    z-index: 20000;
+    z-index: 2000;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
     position: fixed;
     width: 100%;
@@ -275,12 +298,12 @@ textarea {
 
 img[data-src] {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: scale(0);
 }
 
 img[src] {
     opacity: 1;
-    transform: translateX(0);
+    transform: scale(1);
     transition: .5s ease-in-out;
 
 }
@@ -474,12 +497,17 @@ footer {
 
     .container-galeria {
         column-count: 3;
-        margin-bottom: 10em;
+        margin-bottom: 0px;
     }
 
     .galeria li p {
         font-size: 0.8rem
     }
+
+    footer {
+        position: inherit;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -541,9 +569,7 @@ footer {
     div.dicas_conteudo>h3 {
         font-size: 0.8rem;
     }
-    .container-galeria {
-        margin-bottom: 16em;
-    }
+
 }
 
 @media (max-width:360px) {
@@ -558,7 +584,7 @@ footer {
 
     .container-galeria {
         column-count: 1;
-        margin-bottom: 10em;
+
     }
 
     .conteudo-rodape {

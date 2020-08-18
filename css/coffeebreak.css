@@ -4,6 +4,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .pace-inactive {
+    display: none;
+  }
+  
+  .pace .pace-progress {
+    background:var(--details);
+    position: fixed;
+    z-index: 8000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+  }
+  
 
 a {
     text-decoration: none;
@@ -38,7 +62,7 @@ textarea {
 .container-cabecalho {
     background: var(--div-background-color);
     display: flex;
-    z-index: 20000;
+    z-index: 2000;
     box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.664);
     position: fixed;
     width: 100%;
@@ -64,6 +88,7 @@ textarea {
     align-items: center;
     width: 100%;
     font-size: 0.8rem;
+
 }
 
 .menu li {
@@ -328,12 +353,12 @@ input {
 
 img[data-src] {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: scale(0);
 }
 
 img[src] {
     opacity: 1;
-    transform: translateX(0);
+    transform: scale(1);
     transition: .5s ease-in-out;
 
 }
@@ -374,25 +399,28 @@ section#dicas a {
 div.dicas_conteudo>h3 {
     text-align: center;
     background-color: var(--details);
-    padding: 10px;
     color: var(--letras);
-
+    position: relative;
+    border-radius: 3px;
+    padding: 3px;
 }
 
-.dicas_conteudo ol::before {
-    height: 5px;
+.dicas_conteudo>h3::after {
+    height: 3px;
+    width: calc(100% - 3rem);
     background-color: var(--letras);
     content: '';
     display: block;
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
 }
-
 
 div.dicas_conteudo img {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--letras);
-
 }
 
 /*-----------*\
@@ -597,9 +625,10 @@ footer {
     footer {
         position: inherit;
     }
-    section#dicas{
+
+    section#dicas {
         margin-bottom: 0px;
-        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -636,7 +665,7 @@ footer {
     div.dicas_conteudo {
         column-count: 1;
     }
-    
+
 }
 
 @media (max-width: 480px) {

@@ -7,11 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="logos/mug_coffee.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
   <link rel="stylesheet" href="css/animais.css" type="text/css">
   <link
-  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
-  rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+    rel="stylesheet">
 </head>
 
 <body id="conteudo">
@@ -31,11 +30,11 @@
         <li class="linhas-menu"><a href="sobre.html">Sobre</a></li>
       </ul>
       <nav class="menu-mobile">
-        <img class="icon-menu" onclick="mudar()" src="icones/iconfinder_basics-12_296823.png" alt="ícone do menu">
+        <img class="icon-menu" onclick="change()" src="icones/iconfinder_basics-12_296823.png" alt="ícone do menu">
         <ul class="sub">
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="agradecimentos.html">agradecimentos</a></li>
-          <li onclick="mudar2()">
+          <li onclick="change_sub()">
             galeria<i class="fas fa-angle-down"></i>
             <ul class="subGaleria">
               <li><a href="">Paisagens</a></li>
@@ -61,7 +60,7 @@
     <ul class="galeria">
       <li>
         <a href="fotos-animais/20200704155239_IMG_0031.jpg" target="_blank"><img class="foto"
-          data-src="fotos-animais/20200704155239_IMG_0031.jpg" alt="Gato" /></a>
+            data-src="fotos-animais/20200704155239_IMG_0031.jpg" alt="Gato" /></a>
         <p>Nico</p>
       </li>
     </ul>
@@ -82,6 +81,10 @@
       <br>
     </div>
   </footer>
+
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/pace.min.js" ></script>
+
 </body>
 
 </html>

@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="logos/mug_coffee.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/cbd12f7b72.js" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
   <link rel="stylesheet" href="css/fantasia.css" type="text/css">
   <link
     href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
@@ -31,11 +30,11 @@
         <li class="linhas-menu"><a href="sobre.html">Sobre</a></li>
       </ul>
       <nav class="menu-mobile">
-        <img class="icon-menu" onclick="mudar()" src="icones/iconfinder_basics-12_296823.png" alt="ícone do menu">
+        <img class="icon-menu" onclick="change()" src="icones/iconfinder_basics-12_296823.png" alt="ícone do menu">
         <ul class="sub">
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="agradecimentos.html">agradecimentos</a></li>
-          <li onclick="mudar2()">
+          <li onclick="change_sub()">
             galeria<i class="fas fa-angle-down"></i>
             <ul class="subGaleria">
               <li><a href="#">Paisagens</a></li>
@@ -124,6 +123,11 @@
             alt="Natal" /></a>
         <p>Ah o natal... data que tudo fica de um jeitinho mágico. &#127877;&#127996;</p>
       </li>
+      <li>
+        <a href="background/snowweb.jpg" target="_blank"><img class="foto" data-src="background/snowweb.jpg"
+            alt="natal"></a>
+        <p>#</p>
+      </li>
     </ul>
   </div>
   <!--Fim galeria-->
@@ -142,6 +146,10 @@
       <br>
     </div>
   </footer>
+
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/pace.min.js" ></script>
+
 </body>
 
 </html>
