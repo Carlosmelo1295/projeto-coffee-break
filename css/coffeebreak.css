@@ -4,30 +4,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* This is a compiled file, you should be editing the file in the templates directory */
 .pace {
     -webkit-pointer-events: none;
     pointer-events: none;
-  
+
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-  }
-  
-  .pace-inactive {
+}
+
+.pace-inactive {
     display: none;
-  }
-  
-  .pace .pace-progress {
-    background:var(--details);
+}
+
+.pace .pace-progress {
+    background: var(--details);
     position: fixed;
     z-index: 8000;
     top: 0;
     right: 100%;
     width: 100%;
     height: 2px;
-  }
-  
+}
+
 
 a {
     text-decoration: none;
@@ -359,7 +360,7 @@ img[data-src] {
 img[src] {
     opacity: 1;
     transform: scale(1);
-    transition: .5s ease-in-out;
+    transition: .8s cubic-bezier(1, 1, 1, 1);
 
 }
 
@@ -370,6 +371,10 @@ section#dicas {
     margin-bottom: 185px;
     overflow: hidden;
     background-attachment: fixed;
+}
+
+#rock {
+    position: absolute;
 }
 
 div.dicas_conteudo {

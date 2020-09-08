@@ -18,7 +18,7 @@ function change_sub() {
     }
 }
 
-//####################################################################
+//#################################################################### 
 
 const focusBox = document.querySelector('div.procura');
 const search = document.querySelector('#procura');
