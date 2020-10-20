@@ -20,7 +20,7 @@
 }
 
 .pace .pace-progress {
-    background: var(--details);
+   background: linear-gradient(45deg, red, blue);
     position: fixed;
     z-index: 8000;
     top: 0;
@@ -52,7 +52,7 @@ textarea {
 :root {
     --div-background-color: #0c0c0c;
     --details: #8083FF;
-    --letras: #F2ECFF;
+    --letras:#f8f8f2;
     --color-caixa-dicas: #24292e;
 }
 
@@ -169,22 +169,19 @@ textarea {
 input {
     height: 40px;
     text-align: left;
-    border: 2px solid var(--letras);
     padding: 5px;
 
 }
 
 .procura {
-    background-image: linear-gradient(to right top, #18002d, #602d47, #9d6764, #cdaa90, #f7f1d1);
     display: flex;
     justify-content: center;
     position: relative;
     left: 50%;
-    width: fit-content;
-    padding: 10px;
+    width: min-content;
     transform: translateX(-50%);
     margin-top: 15px;
-    border-radius: 3px;
+
 }
 
 #procura {

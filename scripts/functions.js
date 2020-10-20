@@ -26,7 +26,6 @@ const btn = document.querySelector('#btn')
 
 //dar foco na caixa de pesquisa
 function focusOn() {
-    focusBox.style.boxShadow = '0 0 10px white'
     btn.style.transform = "translateX(5px)"
     btn.style.boxShadow = '0 5px 10px black'
     btn.style.transition = '500ms'
@@ -35,7 +34,6 @@ function focusOn() {
 function focusOff() {
     btn.style.transform = "translateX(0px)"
     btn.style.boxShadow = 'none'
-    focusBox.style.boxShadow = 'none'
 }
 //scroll
 
