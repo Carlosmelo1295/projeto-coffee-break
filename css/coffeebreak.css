@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+@keyframes load {
+    to {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
 /* This is a compiled file, you should be editing the file in the templates directory */
 .pace {
     -webkit-pointer-events: none;
@@ -20,7 +30,7 @@
 }
 
 .pace .pace-progress {
-   background: linear-gradient(45deg, red, blue);
+    background: linear-gradient(45deg, red, blue);
     position: fixed;
     z-index: 8000;
     top: 0;
@@ -52,7 +62,7 @@ textarea {
 :root {
     --div-background-color: #0c0c0c;
     --details: #8083FF;
-    --letras:#f8f8f2;
+    --letras: #f8f8f2;
     --color-caixa-dicas: #24292e;
 }
 
@@ -164,50 +174,6 @@ textarea {
     justify-content: center;
     align-items: center;
     animation: load 2s;
-}
-
-input {
-    height: 40px;
-    text-align: left;
-    padding: 5px;
-
-}
-
-.procura {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 50%;
-    width: min-content;
-    transform: translateX(-50%);
-    margin-top: 15px;
-
-}
-
-#procura {
-    width: 230px;
-
-}
-
-#btn {
-    width: 40px;
-    text-align: center;
-
-}
-
-#btn:hover {
-    filter: opacity(0.7);
-
-}
-
-@keyframes load {
-    to {
-        opacity: 1;
-    }
-
-    from {
-        opacity: 0;
-    }
 }
 
 /*filtro para deixar a foto do submenu com menos iluminação*/
@@ -340,7 +306,7 @@ input {
 .foto {
     width: 100% !important;
     height: auto !important;
-    transition: 500ms;
+    transition: 200ms;
     border-radius: 4px;
 
 }
@@ -351,13 +317,13 @@ input {
 
 img[data-src] {
     opacity: 0;
-    transform: scale(0);
+    transform: scale(2);
 }
 
 img[src] {
     opacity: 1;
-    transform: scale(1);
-    transition: .8s cubic-bezier(1, 1, 1, 1);
+     transform: scale(1);
+    transition: .5s ease-in-out;
 
 }
 
@@ -683,14 +649,6 @@ footer {
 
     .galeria li p {
         font-size: 1.5rem;
-    }
-
-    input {
-        height: 30px;
-    }
-
-    #procura {
-        width: 160px;
     }
 
     .conteudo-rodape {
